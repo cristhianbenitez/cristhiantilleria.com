@@ -14,7 +14,9 @@ export default function Home({}: any) {
         <p>
           Hello! I&apos;m Cristhian a Front End Developer and a hobbyist
           Photographer. You can contact me at{` `}
-          <a href="https://twitter.com/pipebenitez25">Twitter</a>
+          <a href="https://twitter.com/pipebenitez25">Twitter, </a>
+          <a href="https://www.linkedin.com/in/cristhianbenitez/">LinkedIn, </a>
+          <a href="mailto:cristhiantilleria@gmail.com">Email</a>
         </p>
         <p>
           {/* What I’m really trying to convey to any person who sees my website is
@@ -27,13 +29,19 @@ export default function Home({}: any) {
           caring what other people thought about my self. */}
         </p>
         <b>
-          PD: I&apos;m currently working on more pages to show my projects and
-          some other stuff...
+          PD: This is currently a just a quick first iteration for my own
+          website, created with Next.js.
         </b>
       </section>
-      <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
-        <Link href={"/blogs"}>
-          <a className={utilStyles.headingLg}>Blog</a>
+      <section
+        className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}
+        style={{ display: "flex", flexDirection: "column" }}
+      >
+        <Link href={"/writings"}>
+          <a className={utilStyles.headingLg}>Writings</a>
+        </Link>
+        <Link href={"/projects"}>
+          <a className={utilStyles.headingLg}>Projects</a>
         </Link>
       </section>
     </Layout>

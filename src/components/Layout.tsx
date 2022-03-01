@@ -4,6 +4,7 @@ import { ReactNode } from "react"
 import styles from "./Layout.module.css"
 import utilStyles from "../styles/utils.module.css"
 import Link from "next/link"
+import { useRouter } from "next/router"
 
 const name = `Cristhian Benitez`
 export const siteTitle = `Cristhian Benitez`
@@ -13,6 +14,8 @@ type LayoutProps = {
   children: ReactNode
 }
 const Content = ({ home, children }: LayoutProps) => {
+  const router = useRouter()
+
   return (
     <div className={styles.container}>
       <Head>
@@ -48,9 +51,9 @@ const Content = ({ home, children }: LayoutProps) => {
       <main>{children}</main>
       {!home && (
         <div className={styles.backToHome}>
-          <Link href="/">
-            <a>← Back to home</a>
-          </Link>
+          <span className={styles.link} onClick={() => router.back()}>
+            ← Back to home
+          </span>
         </div>
       )}
     </div>

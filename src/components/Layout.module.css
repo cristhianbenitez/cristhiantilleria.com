@@ -13,3 +13,11 @@
 .backToHome {
   margin: 3rem 0 0;
 }
+
+.link {
+  color: #0070f3;
+  cursor: pointer;
+}
+.link:hover {
+  text-decoration: underline;
+}

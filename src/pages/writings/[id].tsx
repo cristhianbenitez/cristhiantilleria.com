@@ -1,10 +1,10 @@
+import Head from "next/head"
+import { GetStaticPaths, GetStaticProps } from "next"
+
 import Layout from "@/components/Layout"
 import Date from "@/components/Date"
 import utilStyles from "@/styles/utils.module.css"
-
-import Head from "next/head"
-import { getAllPostIds, getPostData } from "../../lib/posts"
-import { GetStaticProps } from "next"
+import { getAllPostIds, getPostData } from "@/lib/posts"
 
 const Post = ({ postData }: any) => {
   return (
@@ -23,7 +23,8 @@ const Post = ({ postData }: any) => {
   )
 }
 export default Post
-export async function getStaticPaths() {
+
+export const getStaticPaths: GetStaticPaths = async () => {
   const paths = getAllPostIds()
   return {
     paths,
@@ -32,6 +33,10 @@ export async function getStaticPaths() {
 }
 
 export const getStaticProps: GetStaticProps = async ({ params }) => {
+  if (!params) {
+    console.error("No parameters passed for static generation")
+    return { props: {} }
+  }
   const postData = await getPostData(params?.id)
   return {
     props: {
