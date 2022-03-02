@@ -3,7 +3,7 @@ import React from "react"
 
 const Projects = () => {
   return (
-    <Layout>
+    <Layout title="Projects">
       <section style={{ display: "flex", flexDirection: "column" }}>
         <a href="https://github.com/cristhianbenitez/crypto-app">Crypto App</a>
         <a href="https://github.com/cristhianbenitez/recognizio">Recognizio</a>
