@@ -1,8 +1,6 @@
-import Head from "next/head"
-import Link from "next/link"
-import Layout, { siteTitle } from "@/components/Layout"
+import Layout from "@/components/Layout"
 
-import utilStyles from "../styles/utils.module.css"
+import utilStyles from "@/styles/utils.module.css"
 
 export default function Home({}: any) {
   return (

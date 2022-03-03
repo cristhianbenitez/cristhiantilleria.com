@@ -1,15 +1,9 @@
 {
-  "name": "typescript-nextjs-starter",
-  "description": "",
+  "name": "cristhianbenitez.xyz",
+  "description": "this is my website",
   "version": "1.0.0",
-  "private": true,
-  "author": "",
-  "license": "MIT",
-  "keywords": [
-    "nextjs",
-    "starter",
-    "typescript"
-  ],
+  "private": false,
+  "author": "Cristhian Benitez",
   "scripts": {
     "dev": "next",
     "build": "next build",
@@ -22,8 +16,8 @@
   },
   "lint-staged": {
     "./src/**/*.{ts,js,jsx,tsx}": [
-      "yarn lint --fix",
-      "yarn format"
+      "npm lint --fix",
+      "npm format"
     ]
   },
   "dependencies": {
@@ -52,6 +46,7 @@
     "eslint-plugin-prettier": "4.0.0",
     "husky": "7.0.4",
     "lint-staged": "12.3.4",
+    "nanoid": "3.3.1",
     "prettier": "2.5.1",
     "typescript": "4.5.5"
   },

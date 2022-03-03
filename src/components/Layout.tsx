@@ -53,9 +53,9 @@ const Content = ({ home, title, children }: LayoutProps) => {
       </div>
       <style jsx>{`
         .container {
-          max-width: 45rem;
+          max-width: 55rem;
           padding: 0 1rem;
-          margin: 2em 6rem;
+          margin: 2em auto;
         }
         .backToHome {
           margin: 3rem 0 0;

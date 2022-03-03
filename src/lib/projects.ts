@@ -4,14 +4,14 @@ import matter from "gray-matter"
 import { remark } from "remark"
 import html from "remark-html"
 
-const postsDirectory = path.join(process.cwd(), `blog`)
+const projectsDirectory = path.join(process.cwd(), `projects`)
 
-export function getSortedPostsData() {
-  const fileNames = fs.readdirSync(postsDirectory)
+export function getSortedProjectsData() {
+  const fileNames = fs.readdirSync(projectsDirectory)
   const allPostsData = fileNames.map((fileName) => {
     const id = fileName.replace(/\.md$/, ``)
 
-    const fullPath = path.join(postsDirectory, fileName)
+    const fullPath = path.join(projectsDirectory, fileName)
     const fileContents = fs.readFileSync(fullPath, `utf8`)
 
     const matterResult = matter(fileContents)
@@ -31,8 +31,8 @@ export function getSortedPostsData() {
   })
 }
 
-export function getAllPostIds() {
-  const fileNames = fs.readdirSync(postsDirectory)
+export function getAllProjectsIds() {
+  const fileNames = fs.readdirSync(projectsDirectory)
   return fileNames.map((fileName) => {
     return {
       params: {
@@ -42,8 +42,8 @@ export function getAllPostIds() {
   })
 }
 
-export async function getPostData(id: any) {
-  const fullPath = path.join(postsDirectory, `${id}.md`)
+export async function getProjectsData(id: any) {
+  const fullPath = path.join(projectsDirectory, `${id}.md`)
   const fileContents = fs.readFileSync(fullPath, `utf8`)
 
   const matterResult = matter(fileContents)

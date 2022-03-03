@@ -1,6 +1,5 @@
 import { getSortedPostsData } from "@/lib/posts"
 import Date from "@/components/Date"
-import Link from "next/link"
 import utilStyles from "@/styles/utils.module.css"
 import Layout from "@/components/Layout"
 import PlainList from "@/components/PlanList"
@@ -26,7 +25,7 @@ const Blog = ({ allPostsData }: any) => {
         <PlainList>
           {allPostsData.map(({ id, date, title }: any) => (
             <li className={utilStyles.listItem} key={id}>
-              <PlainLink href={`/writings/${id}`}>{title}</PlainLink>
+              <PlainLink href={`/blog/${id}`}>{title}</PlainLink>
               <br />
               <small className={utilStyles.lightText}>
                 <Date dateString={date} />
