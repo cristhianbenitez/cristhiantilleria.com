@@ -16,10 +16,6 @@ export default function Home({}: any) {
           <a href="https://www.linkedin.com/in/cristhianbenitez/">LinkedIn, </a>
           <a href="mailto:cristhiantilleria@gmail.com">Email</a>
         </p>
-        <span>
-          PD: This is currently a just a quick first iteration for my own
-          website, created with Next.js.
-        </span>
       </section>
     </Layout>
   )
