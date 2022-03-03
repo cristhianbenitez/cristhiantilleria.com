@@ -4,6 +4,7 @@
   "version": "1.0.0",
   "private": false,
   "author": "Cristhian Benitez",
+  "license": "MIT",
   "scripts": {
     "dev": "next",
     "build": "next build",

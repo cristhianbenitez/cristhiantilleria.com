@@ -1,4 +1,3 @@
-import Head from "next/head"
 import { GetStaticPaths, GetStaticProps } from "next"
 
 import Layout from "@/components/Layout"

@@ -20,7 +20,7 @@ const Projects = ({ allProjectsData }: ProjectsProps) => {
     <>
       <Layout title="Projects">
         <section>
-          {allProjectsData.map(({ title, description, id, date, stack }) => {
+          {allProjectsData.map(({ title, description, id, date }) => {
             return (
               <article key={nanoid()} className="projects-container">
                 <a href={`/projects/${id}`}>{title}</a>

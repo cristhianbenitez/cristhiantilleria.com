@@ -1,15 +1,9 @@
 import Head from "next/head"
 import { ReactNode } from "react"
 
-import styles from "./Layout.module.css"
-import utilStyles from "@/styles/utils.module.css"
 import siteConfig from "@/data/siteconfig.json"
-import Link from "next/link"
 import { useRouter } from "next/router"
 import Header from "./Header"
-
-const name = `Cristhian Benitez`
-// export const siteTitle = `Cristhian Benitez`
 
 type LayoutProps = {
   home?: any
