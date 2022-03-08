@@ -3,32 +3,17 @@ import { nanoid } from "nanoid"
 
 import Layout from "@/components/Layout"
 import utilStyles from "@/styles/utils.module.css"
-import { getSortedProjectsData } from "@/lib/projects"
 
-interface ProjectsProps {
-  allProjectsData: {
-    date: string
-    title: string
-    id: string
-    description: string
-    stack: string[]
-  }[]
-}
-
-const Projects = ({ allProjectsData }: ProjectsProps) => {
+const Projects = ({ allProjectsData }) => {
   return (
     <>
       <Layout title="Projects">
+        <p>Some of my main projects:</p>
         <section>
-          {allProjectsData.map(({ title, description, id, date }) => {
-            return (
-              <article key={nanoid()} className="projects-container">
-                <a href={`/projects/${id}`}>{title}</a>
-                <small className={utilStyles.lightText}>{date}</small>
-                <small>{description}</small>
-              </article>
-            )
-          })}
+          <p>
+            Visit my<a href="https://github.com/cristhianbenitez"> Github </a>
+            profile to see more
+          </p>
         </section>
       </Layout>
 
@@ -42,15 +27,6 @@ const Projects = ({ allProjectsData }: ProjectsProps) => {
       `}</style>
     </>
   )
-}
-
-export async function getStaticProps() {
-  const allProjectsData = getSortedProjectsData()
-  return {
-    props: {
-      allProjectsData,
-    },
-  }
 }
 
 export default Projects
