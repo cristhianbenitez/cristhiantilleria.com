@@ -4,7 +4,7 @@ import { nanoid } from "nanoid"
 import Layout from "@/components/Layout"
 import utilStyles from "@/styles/utils.module.css"
 
-const Projects = ({ allProjectsData }) => {
+const Projects = () => {
   return (
     <>
       <Layout title="Projects">
