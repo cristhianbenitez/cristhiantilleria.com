@@ -4,6 +4,7 @@ import { ReactNode } from "react"
 import siteConfig from "@/data/siteconfig.json"
 import { useRouter } from "next/router"
 import Header from "./Header"
+import MetaTags from "./MetaTags"
 
 type LayoutProps = {
   home?: any
@@ -13,26 +14,18 @@ type LayoutProps = {
 const Content = ({ home, title, children }: LayoutProps) => {
   const router = useRouter()
   const site = siteConfig
+  const thumbnail = "/public/thumbnail.png"
 
   const pageTitle = title ? `${title} | ${site.title}` : site.title
   return (
     <>
       <div className="container">
         <Head>
-          <link rel="icon" href="/favicon.ico" />
-          <meta
-            name="description"
-            content="Learn how to build a personal website using Next.js"
+          <MetaTags
+            thumbnail={thumbnail}
+            pageTitle={pageTitle}
+            description={site.title}
           />
-          <meta
-            property="og:image"
-            content={`https://og-image.vercel.app/${encodeURI(
-              site.title
-            )}.png?theme=light&md=0&fontSize=75px&images=https%3A%2F%2Fassets.vercel.com%2Fimage%2Fupload%2Ffront%2Fassets%2Fdesign%2Fnextjs-black-logo.svg`}
-          />
-          <meta name="og:title" content={site.title} />
-          <meta name="twitter:card" content="summary_large_image" />
-          <title>{pageTitle}</title>
         </Head>
         <Header siteTitle={site.title} />
         <main>{children}</main>

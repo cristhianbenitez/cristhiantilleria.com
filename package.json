@@ -17,8 +17,8 @@
   },
   "lint-staged": {
     "./src/**/*.{ts,js,jsx,tsx}": [
-      "npm lint --fix",
-      "npm format"
+      "npm run lint --fix",
+      "npm run format"
     ]
   },
   "dependencies": {
