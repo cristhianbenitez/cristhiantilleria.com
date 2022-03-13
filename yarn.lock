@@ -564,7 +564,7 @@ aggregate-error@^3.0.0:
     clean-stack "^2.0.0"
     indent-string "^4.0.0"
 
-airtable@^0.11.2:
+airtable@0.11.2:
   version "0.11.2"
   resolved "https://registry.npmjs.org/airtable/-/airtable-0.11.2.tgz"
   integrity sha512-2kYULLdnqa7ZpaWXXfLTNKMzU+BTUBOZ6TPGahpH3KfJB9Sl18ih0v0zV1PIvpDxTWq+u76jGMAya9NDVZJT/Q==
