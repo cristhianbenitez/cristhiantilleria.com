@@ -15,8 +15,13 @@ const PlainLink = ({ children, className, href, onClick }: Props) => (
       </Link>
     </span>
     <style jsx>{`
-      .plainlink-wrapper a {
+      .plainlink-wrapper > a {
         text-decoration: none;
+      }
+
+      .blogTitle:hover > a,
+      .blogTitle:focus > a {
+        color: #ff7276;
       }
     `}</style>
   </>

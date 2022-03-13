@@ -1,17 +1,16 @@
 import { ReactNode } from "react"
-import { useRouter } from "next/router"
 
 import siteConfig from "@/data/siteconfig.json"
 import Header from "./Header"
 import Metatags from "./Metatags"
+import utilStyles from "@/styles/utils.module.css"
 
 type LayoutProps = {
-  home?: any
   children: ReactNode
   title?: string
 }
-const Content = ({ home, title, children }: LayoutProps) => {
-  const router = useRouter()
+
+const Content = ({ title, children }: LayoutProps) => {
   const site = siteConfig
 
   return (
@@ -19,15 +18,10 @@ const Content = ({ home, title, children }: LayoutProps) => {
       <div className="container">
         <Metatags title={title} />
         <Header siteTitle={site.title} />
-        <main>{children}</main>
-
-        {!home && (
-          <div className="backToHome">
-            <span className="link" onClick={() => router.back()}>
-              ← Back
-            </span>
-          </div>
-        )}
+        <main>
+          <h1 className={utilStyles.pageHeader}>{title}</h1>
+          {children}
+        </main>
       </div>
       <style jsx>{`
         .container {
@@ -35,27 +29,11 @@ const Content = ({ home, title, children }: LayoutProps) => {
           padding: 0 1rem;
           margin: 2em auto;
         }
-        .backToHome {
-          margin: 3rem 0 0;
-        }
-        .link {
-          color: #0070f3;
-          cursor: pointer;
-        }
-        .link:hover {
-          text-decoration: underline;
-        }
       `}</style>
     </>
   )
 }
 
-export default function Layout({ children, home, title }: LayoutProps) {
-  return (
-    <>
-      <Content home={home} title={title}>
-        {children}
-      </Content>
-    </>
-  )
+export default function Layout({ children, title }: LayoutProps) {
+  return <Content title={title}>{children}</Content>
 }

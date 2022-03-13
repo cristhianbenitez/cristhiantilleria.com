@@ -45,8 +45,22 @@
 
 .listItem {
   margin: 0 0 1.25rem;
+  font-size: 1.5rem;
 }
 
 .lightText {
-  color: #666;
+  font-size: 1rem;
+  color: #ffff;
+  opacity: 0.5;
+}
+
+.pageHeader {
+  margin: 0;
+  font-size: 3em;
+  margin-bottom: 0.5em;
+}
+
+.flexCol {
+  display: flex;
+  flex-direction: column;
 }

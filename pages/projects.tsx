@@ -1,5 +1,4 @@
 import React from "react"
-import { nanoid } from "nanoid"
 
 import Layout from "@/components/Layout"
 import utilStyles from "@/styles/utils.module.css"
@@ -8,7 +7,6 @@ const Projects = () => {
   return (
     <>
       <Layout title="Projects">
-        <p>Some of my main projects:</p>
         <section>
           <p>
             Visit my<a href="https://github.com/cristhianbenitez"> Github </a>

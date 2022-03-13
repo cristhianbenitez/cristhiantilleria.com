@@ -2,7 +2,7 @@ import React from "react"
 import { useRouter } from "next/router"
 
 import PlainLink from "./PlainLink"
-import PlainList from "./PlanList"
+import PlainList from "./PlainList"
 
 interface HeaderProps {
   siteTitle: string
@@ -37,7 +37,9 @@ const Header = ({ siteTitle }: HeaderProps) => {
               <li key={to}>
                 <PlainLink href={to}>
                   {label}
-                  {location.includes(to) ? " ◄" : ""}
+                  <span className="guide-icon">
+                    {location.includes(to) ? " ◄" : ""}
+                  </span>
                 </PlainLink>
               </li>
             ))}
@@ -50,11 +52,15 @@ const Header = ({ siteTitle }: HeaderProps) => {
           display: flex;
           justify-content: space-between;
           width: 100%;
+          font-family: "Source Serif Pro", Helvetica, sans-serif;
         }
         nav :global(ul) {
           display: flex;
           gap: 1em;
           margin-bottom: 2em;
+        }
+        .guide-icon {
+          font-size: 0.65rem;
         }
       `}</style>
     </>

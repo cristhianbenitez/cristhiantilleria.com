@@ -16,7 +16,8 @@
     {
       "description": "Update the Renovate GitHub action weakly with fix type",
       "packageNames": "renovatebot/github-action",
-      "extends": [":semanticCommitType(fix)", "schedule:weekly"]
+      "extends": [":semanticCommitType(fix)", "schedule:weekly"],
+      "automerge": true
     }
   ]
 }

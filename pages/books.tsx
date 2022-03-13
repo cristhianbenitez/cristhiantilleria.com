@@ -1,7 +1,9 @@
-import Layout from "@/components/Layout"
 import React from "react"
-import { books } from "@/utils/airtable"
+
+import Layout from "@/components/Layout"
 import Image from "next/image"
+
+import { books } from "@/utils/airtable"
 
 const Books = ({ entries }: { entries: MediaData[] }) => {
   return (
