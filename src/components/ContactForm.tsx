@@ -9,7 +9,9 @@ const ContactForm = () => {
     message: "",
   })
 
-  const handleInputChange: React.ChangeEventHandler<HTMLInputElement> = (e) => {
+  const handleInputChange: React.ChangeEventHandler<
+    HTMLInputElement | HTMLTextAreaElement
+  > = (e) => {
     e.persist()
     setInputs((inputs) => ({ ...inputs, [e.target.name]: e.target.value }))
   }

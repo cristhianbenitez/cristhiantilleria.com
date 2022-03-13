@@ -8,15 +8,18 @@ const about = () => {
   return (
     <>
       <Layout title="About">
-        <section>
+        {/* <section>
           <p>
-            Cristhian Benitez is a passionate introvert who wants to help make
-            the world a better place by building cool stuff on the web. He
-            spends his time trying to write, reading, thinking, and continuously
-            acquiring knowledge
+            Hey There!! I&apos;m Cristhian, a passionate introvert who wants to
+            help make the world a better place by building cool stuff on the web
+            and learn something new everything to improve my understanding of
+            world.
           </p>
-          <p>As a</p>
-
+          <p>
+            Currently I&apos;m based in NYC, I spent much of my time trying to
+            write, thinking, reading, and trying to connect with new people.
+            I&apos;m a adventurous soul
+          </p>
           <div className="image-wrapper">
             <div className="selfPic">
               <Image
@@ -27,8 +30,9 @@ const about = () => {
               />
             </div>
           </div>
-        </section>
+        </section> */}
       </Layout>
+
       <style jsx>
         {`
           .selfPic {
