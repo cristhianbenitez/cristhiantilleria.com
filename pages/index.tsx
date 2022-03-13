@@ -2,9 +2,9 @@ import Layout from "@/components/Layout"
 
 import utilStyles from "@/styles/utils.module.css"
 
-export default function Home({}: any) {
+export default function Home() {
   return (
-    <Layout home>
+    <Layout>
       <section className={utilStyles.headingMd}>
         <p>
           Hello! I&apos;m Cristhian a Front End Developer and a hobbyist

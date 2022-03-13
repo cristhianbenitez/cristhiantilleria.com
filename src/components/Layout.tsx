@@ -8,18 +8,19 @@ import utilStyles from "@/styles/utils.module.css"
 type LayoutProps = {
   children: ReactNode
   title?: string
+  hide?: boolean
 }
 
-const Content = ({ title, children }: LayoutProps) => {
+const Content = ({ title, children, hide }: LayoutProps) => {
   const site = siteConfig
-
+  console.log(hide)
   return (
     <>
       <div className="container">
         <Metatags title={title} />
         <Header siteTitle={site.title} />
         <main>
-          <h1 className={utilStyles.pageHeader}>{title}</h1>
+          {!hide && <h1 className={utilStyles.pageHeader}>{title}</h1>}
           {children}
         </main>
       </div>
@@ -34,6 +35,10 @@ const Content = ({ title, children }: LayoutProps) => {
   )
 }
 
-export default function Layout({ children, title }: LayoutProps) {
-  return <Content title={title}>{children}</Content>
+export default function Layout({ children, title, hide = false }: LayoutProps) {
+  return (
+    <Content title={title} hide={hide}>
+      {children}
+    </Content>
+  )
 }

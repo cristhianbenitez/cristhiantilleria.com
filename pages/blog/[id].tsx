@@ -6,13 +6,15 @@ import Date from "@/components/Date"
 import utilStyles from "@/styles/utils.module.css"
 import { getAllPostIds, getPostData } from "@/lib/posts"
 
+export type postDataProps = {
+  contentHtml: string
+  date: string
+  id: string
+  title: string
+}
+
 type Props = {
-  postData: {
-    contentHtml: string
-    date: string
-    id: string
-    title: string
-  }
+  postData: postDataProps
 }
 
 const Post = ({ postData }: Props) => {
@@ -20,7 +22,7 @@ const Post = ({ postData }: Props) => {
 
   return (
     <>
-      <Layout title={postData.title}>
+      <Layout title={postData.title} hide>
         <article className="article wrapper">
           <section className="article-header">
             <h1 className={utilStyles.headingXl}>{postData.title}</h1>
@@ -62,7 +64,7 @@ const Post = ({ postData }: Props) => {
 }
 export default Post
 
-export const getStaticPaths: GetStaticPaths = async () => {
+export const getStaticPaths: GetStaticPaths = () => {
   const paths = getAllPostIds()
   return {
     paths,
@@ -75,7 +77,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
     console.error("No parameters passed for static generation")
     return { props: {} }
   }
-  const postData = await getPostData(params?.id)
+  const postData = await getPostData(params?.id as string)
   return {
     props: {
       postData,

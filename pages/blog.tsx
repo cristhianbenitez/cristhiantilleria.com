@@ -5,13 +5,21 @@ import Layout from "@/components/Layout"
 import PlainList from "@/components/PlainList"
 import PlainLink from "@/components/PlainLink"
 
-const Blog = ({ allPostsData }: any) => {
+type Props = {
+  allPostsData: {
+    date: string
+    id: string
+    title: string
+  }[]
+}
+
+const Blog = ({ allPostsData }: Props) => {
   const { listItem, flexCol } = utilStyles
   return (
     <Layout title="Blog">
       <section>
         <PlainList>
-          {allPostsData.map(({ id, date, title }: any) => (
+          {allPostsData.map(({ id, date, title }) => (
             <li className={`${listItem} ${flexCol}`} key={id}>
               <PlainLink href={`/blog/${id}`} className="blogTitle">
                 {title}
@@ -28,7 +36,7 @@ const Blog = ({ allPostsData }: any) => {
 }
 
 export default Blog
-export async function getStaticProps() {
+export function getStaticProps() {
   const allPostsData = getSortedPostsData()
   return {
     props: {
