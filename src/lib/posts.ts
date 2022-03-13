@@ -23,6 +23,7 @@ export function getSortedPostsData() {
   })
 
   return allPostsData.sort((a: any, b: any) => {
+    // eslint-disable-next-line @typescript-eslint/no-unsafe-member-access
     if (a.date < b.date) {
       return 1
     } else {

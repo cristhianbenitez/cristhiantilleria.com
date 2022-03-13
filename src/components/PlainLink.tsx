@@ -1,7 +1,7 @@
 import Link, { LinkProps } from "next/link"
 
 type Props = React.PropsWithChildren<LinkProps> & {
-  className?: string
+  className?: string | undefined
   onClick?: () => void
 }
 

@@ -1,0 +1,22 @@
+[
+  {
+    "image": "https://ik.imagekit.io/olxpctrmvr9/bitmarket?ik-sdk-version=javascript-1.4.3&updatedAt=1647205783271",
+    "title": "Bit Market",
+    "description": "Built with React, Redux and React Router mainly. Bit Market is Single Page Application that provides an analysis of the crypto currencies market. Offering information about all the crypto currencies, their prices, display information thought graphs and information about any specific coin.",
+    "live": "https://bitmarket.vercel.app/",
+    "repo": "https://github.com/cristhianbenitez/bitmarket"
+  },
+  {
+    "title": "Netflix Clone",
+    "description": ".",
+    "live": "https://bitmarket.vercel.app/",
+    "repo": "https://github.com/cristhianbenitez/bitmarket"
+  },
+  {
+    "image": "https://ik.imagekit.io/olxpctrmvr9/easybankpage_uqmAZsir-vk-?ik-sdk-version=javascript-1.4.3&updatedAt=1647207396246",
+    "title": "Easy Bank",
+    "description": "A static website created",
+    "live": "https://easybank-page.surge.sh/#",
+    "repo": "https://github.com/cristhianbenitez/html-websites/tree/main/easybank"
+  }
+]

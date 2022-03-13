@@ -13,24 +13,23 @@ const links = [
     to: "/blog",
     label: "Blog",
   },
-  {
-    to: "/projects",
-    label: "Projects",
-  },
   { to: "/mixtape", label: "Mixtape" },
   {
     to: "/books",
     label: "Books",
   },
   { to: "/about", label: "About" },
+  { to: "/contact", label: "Contact" },
 ]
 
 const Header = ({ siteTitle }: HeaderProps) => {
   const location = useRouter().pathname
   return (
     <>
-      <header>
-        <PlainLink href="/">{siteTitle}</PlainLink>
+      <header className="header">
+        <PlainLink href="/">
+          <span>{siteTitle}</span>
+        </PlainLink>
         <nav>
           <PlainList>
             {links.map(({ to, label }) => (
@@ -48,16 +47,19 @@ const Header = ({ siteTitle }: HeaderProps) => {
       </header>
 
       <style jsx>{`
-        header {
+        .header {
+          position: sticky;
           display: flex;
           justify-content: space-between;
           width: 100%;
+          z-index: 9999;
           font-family: "Source Serif Pro", Helvetica, sans-serif;
         }
         nav :global(ul) {
           display: flex;
           gap: 1em;
           margin-bottom: 2em;
+          align-items: center;
         }
         .guide-icon {
           font-size: 0.65rem;
