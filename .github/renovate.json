@@ -1,13 +1,19 @@
 {
-  "extends": ["config:base"],
-  "semanticCommits": true,
-  "stabilityDays": 3,
-  "prCreation": "not-pending",
-  "labels": ["type: dependencies"],
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": ["github>cristhianbenitez/.github"],
   "packageRules": [
     {
-      "packageNames": ["node"],
-      "enabled": false
+      "matchUpdateTypes": ["minor", "patch", "pin", "digest"],
+      "automerge": true
+    },
+    {
+      "matchDepTypes": ["devDependencies"],
+      "automerge": true
+    },
+    {
+      "description": "Update the Renovate GitHub action weakly with fix type",
+      "packageNames": "renovatebot/github-action",
+      "extends": [":semanticCommitType(fix)", "schedule:weekly"]
     }
   ]
 }
