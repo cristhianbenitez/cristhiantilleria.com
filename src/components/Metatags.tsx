@@ -8,7 +8,7 @@ type Props = {
 
 const Metatags = ({ title }: Props) => {
   const site = siteConfig
-  const thumbnail = "/public/thumbnail.png"
+  const thumbnail = `https://${process.env.VERCEL_URL}/images/og.png`
   const description = site.description
 
   const pageTitle = title ? `${title} | ${site.title}` : site.title

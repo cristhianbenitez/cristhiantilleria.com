@@ -22,6 +22,7 @@ const links = [
     label: "Books",
   },
   { to: "/about", label: "About" },
+  { to: "/mixtape", label: "Mixtape" },
 ]
 
 const Header = ({ siteTitle }: HeaderProps) => {
