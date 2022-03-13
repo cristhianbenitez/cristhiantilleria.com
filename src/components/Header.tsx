@@ -17,6 +17,7 @@ const links = [
     to: "/projects",
     label: "Projects",
   },
+  { to: "/mixtape", label: "Mixtape" },
   {
     to: "/books",
     label: "Books",
