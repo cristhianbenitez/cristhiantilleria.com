@@ -1,15 +1,16 @@
+import { serialize } from "next-mdx-remote/serialize"
 import fs from "fs"
 import path from "path"
 import matter from "gray-matter"
-import { remark } from "remark"
-import html from "remark-html"
+import { postFilePaths, POSTS_PATH } from "@/utils/mdxUtils"
 
 const postsDirectory = path.join(process.cwd(), `blog`)
 
 export function getSortedPostsData() {
   const fileNames = fs.readdirSync(postsDirectory)
+
   const allPostsData = fileNames.map((fileName) => {
-    const id = fileName.replace(/\.md$/, ``)
+    const id = fileName.replace(/\.mdx$/, ``)
 
     const fullPath = path.join(postsDirectory, fileName)
     const fileContents = fs.readFileSync(fullPath, `utf8`)
@@ -32,31 +33,29 @@ export function getSortedPostsData() {
   })
 }
 
-export function getAllPostIds() {
-  const fileNames = fs.readdirSync(postsDirectory)
-  return fileNames.map((fileName) => {
-    return {
-      params: {
-        id: fileName.replace(/\.md$/, ``),
-      },
-    }
-  })
+export function getAllPostSlugs() {
+  const paths = postFilePaths
+    // Remove file extensions for page paths
+    .map((path) => path.replace(/\.mdx?$/, ""))
+    // Map the path into the static paths object required by Next.js
+    .map((slug) => ({ params: { slug } }))
+
+  return paths
 }
 
-export async function getPostData(id: string) {
-  const fullPath = path.join(postsDirectory, `${id}.md`)
-  const fileContents = fs.readFileSync(fullPath, `utf8`)
+export async function getPostData(slug: string) {
+  const postFilePath = path.join(POSTS_PATH, `${slug}.mdx`)
+  const source = fs.readFileSync(postFilePath)
 
-  const matterResult = matter(fileContents)
+  const { content, data } = matter(source)
 
-  const processedContent = await remark()
-    .use(html)
-    .process(matterResult.content)
-  const contentHtml = processedContent.toString()
-
-  return {
-    id,
-    contentHtml,
-    ...matterResult.data,
-  }
+  const mdxSource = await serialize(content, {
+    // Optionally pass remark/rehype plugins
+    mdxOptions: {
+      remarkPlugins: [],
+      rehypePlugins: [],
+    },
+    scope: data,
+  })
+  return { source: mdxSource, frontMatter: data }
 }
