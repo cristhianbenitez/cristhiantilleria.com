@@ -35,12 +35,6 @@ const Skills = () => {
           </ul>
         </section>
         <section className="projects-cards"></section>
-        <p>
-          Contact me at{` `}
-          <a href="https://twitter.com/pipebenitez25">Twitter, </a>
-          <a href="https://www.linkedin.com/in/cristhianbenitez/">LinkedIn, </a>
-          <a href="mailto:cristhiantilleria@gmail.com">Email</a>
-        </p>
       </section>
 
       <style jsx>{`
