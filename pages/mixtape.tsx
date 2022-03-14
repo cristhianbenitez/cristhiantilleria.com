@@ -41,8 +41,8 @@ const mixtape = () => {
                     ></iframe>
                   </li>
                   <li>
-                    Someone in twitter shared this albums artist and since then
-                    I&apos;ve playing it non stop
+                    Someone in twitter shared this artist&apos;s album and since
+                    then I&apos;ve playing it non stop
                     <iframe
                       style={{ borderRadius: "12px" }}
                       src="https://open.spotify.com/embed/album/0RqOFwSMSF02awYaXYdtxo?utm_source=generator&theme=0"

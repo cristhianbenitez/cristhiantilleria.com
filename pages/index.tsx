@@ -33,7 +33,6 @@ export default function Home() {
           offset={0}
           speed={0.5}
           className={utilStyles.container}
-          onClick={() => scroll(1)}
         >
           <Intro />
         </ParallaxLayer>
@@ -45,15 +44,10 @@ export default function Home() {
         >
           <Skills />
         </ParallaxLayer>
-        <ParallaxLayer offset={2} speed={0.25} onClick={() => scroll(3)}>
+        <ParallaxLayer offset={2} speed={0.25}>
           <Projects />
         </ParallaxLayer>
-        <ParallaxLayer
-          offset={3}
-          speed={0.25}
-          style={styles.layer}
-          onClick={() => scroll(0)}
-        >
+        <ParallaxLayer offset={3} speed={0.25} style={styles.layer}>
           <ContactForm scroll={scroll} />
         </ParallaxLayer>
       </Parallax>
