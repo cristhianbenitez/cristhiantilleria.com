@@ -5,10 +5,7 @@ import Layout from "@/components/Layout"
 const mixtape = () => {
   return (
     <Layout title="Mixtape">
-      <p>
-        In this page I would to share many things I recently found online and
-        really likes, weather a music, a video, a quote, whatever.
-      </p>
+      <p>Why not share any great thing whether music, podcast or anything</p>
 
       <section>
         <h3>Categories</h3>
@@ -19,7 +16,14 @@ const mixtape = () => {
             kind of anywhere. Why not share it ?{" "}
           </span>
 
-          <ul></ul>
+          <ul>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+          </ul>
         </div>
 
         <div>
@@ -38,7 +42,7 @@ const mixtape = () => {
           ></iframe>
         </div>
         <div>
-          <h4>My Podcasts</h4>
+          <h4>Podcasts</h4>
           <span>
             If you&apos;ve listened to any of these or like the poetasters,
             doesn&apos;t hesitate to text me and let&apos;s have a chat about

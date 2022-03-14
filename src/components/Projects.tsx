@@ -6,6 +6,7 @@ import Card from "@/components/Card"
 import utilStyles from "@/styles/utils.module.css"
 
 type ProjectProps = {
+  image: string
   title: string
   description: string
   live: string

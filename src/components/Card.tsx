@@ -29,10 +29,10 @@ const Card = (props: Props) => {
           <h2 className="card-title">{props.title}</h2>
           <p className="card-description">{props.description}</p>
           <div className="card-links">
-            <a href={props.repo}>
+            <a className="card-icon" href={props.repo}>
               <Image src={Github} width={30} height={30} alt="github link" />
             </a>
-            <a href={props.live}>
+            <a className="card-icon" href={props.live}>
               <Image src={Repo} width={30} height={30} alt="github link" />
             </a>
           </div>
@@ -69,6 +69,10 @@ const Card = (props: Props) => {
           display: flex;
           justify-content: center;
           gap: 2em;
+        }
+        .card-icon:hover,
+        .card-icon:focus {
+          transform: scale(1.09);
         }
       `}</style>
     </>

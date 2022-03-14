@@ -6,7 +6,6 @@ module.exports = {
   useTabs: false,
   proseWrap: "always",
   printWidth: 80,
-
   overrides: [
     {
       files: ["*.md", "*.mdx"],

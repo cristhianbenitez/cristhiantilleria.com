@@ -12,37 +12,51 @@ export default function Home() {
   const parallax = React.useRef<IParallax>(null)
 
   const styles = {
-    layer1: {
+    layer: {
       display: "flex",
       backgroundColor: "#1F2933",
       paddingTop: "4em",
       alignItems: "center",
     },
   }
-  return (
-    <>
-      <Layout>
-        <Parallax ref={parallax} pages={4} style={{ top: "0", left: "0" }}>
-          <ParallaxLayer
-            offset={0}
-            speed={0.5}
-            className={utilStyles.container}
-          >
-            <Intro />
-          </ParallaxLayer>
-          <ParallaxLayer offset={1} speed={0.25} style={styles.layer1}>
-            <Skills />
-          </ParallaxLayer>
-          <ParallaxLayer offset={2} speed={0.25}>
-            <Projects />
-          </ParallaxLayer>
-          <ParallaxLayer offset={3} speed={0.25} style={styles.layer1}>
-            <ContactForm />
-          </ParallaxLayer>
-        </Parallax>
-      </Layout>
+  const scroll = (to: number) => {
+    if (parallax.current) {
+      parallax.current.scrollTo(to)
+    }
+  }
 
-      <style jsx>{``}</style>
-    </>
+  return (
+    <Layout>
+      <Parallax ref={parallax} pages={4} style={{ top: "0", left: "0" }}>
+        <ParallaxLayer
+          factor={3}
+          offset={0}
+          speed={0.5}
+          className={utilStyles.container}
+          onClick={() => scroll(1)}
+        >
+          <Intro />
+        </ParallaxLayer>
+        <ParallaxLayer
+          offset={1}
+          speed={0.25}
+          style={styles.layer}
+          onClick={() => scroll(2)}
+        >
+          <Skills />
+        </ParallaxLayer>
+        <ParallaxLayer offset={2} speed={0.25} onClick={() => scroll(3)}>
+          <Projects />
+        </ParallaxLayer>
+        <ParallaxLayer
+          offset={3}
+          speed={0.25}
+          style={styles.layer}
+          onClick={() => scroll(0)}
+        >
+          <ContactForm scroll={scroll} />
+        </ParallaxLayer>
+      </Parallax>
+    </Layout>
   )
 }

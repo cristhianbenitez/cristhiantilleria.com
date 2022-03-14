@@ -19,7 +19,6 @@ const links = [
     label: "Books",
   },
   { to: "/about", label: "About" },
-  { to: "/contact", label: "Contact" },
 ]
 
 const Header = ({ siteTitle }: HeaderProps) => {

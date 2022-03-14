@@ -1,5 +1,4 @@
 import { MDXFrontMatter } from "*.mdx"
-import dynamic from "next/dynamic"
 import router from "next/router"
 import { MDXRemote } from "next-mdx-remote"
 import { MDXRemoteSerializeResult } from "next-mdx-remote"

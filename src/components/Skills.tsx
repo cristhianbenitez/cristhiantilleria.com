@@ -34,7 +34,6 @@ const Skills = () => {
             <li> ○ ZenHub</li>
           </ul>
         </section>
-        <section className="projects-cards"></section>
       </section>
 
       <style jsx>{`

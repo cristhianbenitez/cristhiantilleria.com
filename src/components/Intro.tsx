@@ -13,7 +13,7 @@ const Intro = () => {
   })
   return (
     <>
-      <a.section style={props}>
+      <a.section style={props} id="intro">
         <div className="intro">
           <div className="intro-title">
             <h1>Cristhian Benitez</h1>
