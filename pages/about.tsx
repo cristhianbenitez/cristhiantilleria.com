@@ -8,6 +8,10 @@ const about = () => {
   return (
     <>
       <Layout title="About">
+        <p>
+          Am I the only one who struggles when it comes about writing about one
+          self ?. Well maybe I struggle with writing itself so this is a WIP.
+        </p>
         {/* <section>
           <p>
             Hey There!! I&apos;m Cristhian, a passionate introvert who wants to
