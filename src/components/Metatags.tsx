@@ -1,33 +1,39 @@
 import React from "react"
 import Head from "next/head"
 import siteConfig from "@/data/siteconfig.json"
-
+import { useRouter } from "next/router"
 type Props = {
   title?: string
 }
 
 const Metatags = ({ title }: Props) => {
+  const { pathname } = useRouter()
   const site = siteConfig
-  const thumbnail = `https://${process.env.VERCEL_URL}/images/og.png`
+  const thumbnail = `https://${process.env.VERCEL_URL}/thumbnail.png`
   const description = site.description
+  const url = `${site.siteUrl}${pathname}`
 
   const pageTitle = title ? `${title} | ${site.title}` : site.title
   return (
     <Head>
       <title>{pageTitle}</title>
-      <meta content={pageTitle} name="title" />
-      <meta content={pageTitle} name="twitter:title" />
+      {/* <!-- Primary Meta Tags --> */}
+      <meta name="title" content={pageTitle} />
+      <meta name="description" content={description} />
 
-      <meta content={description} name="description" />
-      <meta content={description} name="twitter:description" />
-      <meta content={description} property="og:description" />
+      {/* <!-- Open Graph / Facebook --/> */}
+      <meta property="og:type" content="website" />
+      <meta property="og:url" content={url} />
+      <meta property="og:title" content={pageTitle} />
+      <meta property="og:description" content={description} />
+      <meta property="og:image" content={thumbnail} />
 
-      {/* {pathname && <meta content={url + pathname} property="og:url" />} */}
-
-      <meta content={thumbnail} property="og:image" />
-      <meta content={thumbnail} property="og:image:secure_url" />
-      <meta content={thumbnail} name="twitter:image" />
-
+      {/* <!-- Twitter --> */}
+      <meta property="twitter:card" content="summary_large_image" />
+      <meta property="twitter:url" content={url} />
+      <meta property="twitter:title" content={pageTitle} />
+      <meta property="twitter:description" content={description} />
+      <meta property="twitter:image" content={thumbnail} />
       <meta content="1200" property="og:image:width" />
       <meta content="630" property="og:image:height" />
       <meta content="summary_large_image" name="twitter:card" />

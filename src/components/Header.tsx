@@ -4,10 +4,6 @@ import { useRouter } from "next/router"
 import PlainLink from "./PlainLink"
 import PlainList from "./PlainList"
 
-interface HeaderProps {
-  siteTitle: string
-}
-
 const links = [
   {
     to: "/blog",
@@ -21,13 +17,13 @@ const links = [
   { to: "/about", label: "About" },
 ]
 
-const Header = ({ siteTitle }: HeaderProps) => {
+const Header = () => {
   const location = useRouter().pathname
   return (
     <>
       <header className="header">
         <PlainLink href="/">
-          <span>{siteTitle}</span>
+          <span>Cristhian Benitez</span>
         </PlainLink>
         <nav>
           <PlainList>
