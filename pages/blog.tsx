@@ -16,7 +16,7 @@ type Props = {
 const Blog = ({ allPostsData }: Props) => {
   const { listItem, flexCol } = utilStyles
   return (
-    <Layout title="Blog">
+    <Layout title="Writing">
       <section>
         <PlainList>
           {allPostsData.map(({ id, date, title }) => (

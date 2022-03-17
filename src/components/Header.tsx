@@ -7,7 +7,7 @@ import PlainList from "./PlainList"
 const links = [
   {
     to: "/blog",
-    label: "Blog",
+    label: "Writing",
   },
   { to: "/mixtape", label: "Mixtape" },
   {
