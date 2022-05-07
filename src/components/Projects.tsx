@@ -5,41 +5,63 @@ import projects from "@/data/projects.json"
 import Card from "@/components/Card"
 import utilStyles from "@/styles/utils.module.css"
 
-type ProjectProps = {
-  image: string
-  title: string
-  description: string
-  live: string
-  repo: string
-}
-
 const Projects = () => {
   return (
     <>
       <section className={utilStyles.container} id="projects">
-        <h2 className="projects-title">What I&apos;ve been working on</h2>
         <section className="projects-cards">
-          {projects.map(
-            ({ image, title, description, live, repo }: ProjectProps) => (
-              <Card
-                key={nanoid()}
-                image={image}
-                title={title}
-                description={description}
-                live={live}
-                repo={repo}
-              />
-            )
-          )}
+          <div className="section" id="work">
+            <div className="work-wrapper">
+              <h1>Work</h1>
+
+              <div className="grid">
+                {projects.map(({ image, title, description, live, source }) => (
+                  <Card
+                    key={nanoid()}
+                    title={title}
+                    description={description}
+                    image={image}
+                    live={live}
+                    source={source}
+                  ></Card>
+                ))}
+              </div>
+            </div>
+          </div>
         </section>
       </section>
       <style jsx>{`
-        .projects-cards {
+        .work-wrapper {
+          width: 100%;
+          margin-top: 10vh;
           display: flex;
-          justify-content: space-between;
+          flex-direction: column;
+          align-items: center;
         }
-        .projects-title {
-          margin-bottom: 2em;
+        .work-wrapper h1 {
+          font-size: 3rem;
+          line-height: 20px;
+        }
+        .work-wrapper .grid {
+          display: grid;
+          margin-top: 20px;
+          grid-template-columns: repeat(2, 1fr);
+          grid-gap: 10px;
+        }
+        @media (min-width: 480px and max-width:535px) {
+          .grid {
+            grid-template-columns: 1fr;
+          }
+        }
+        @media (min-width: 535px and max-width:748px) {
+          .grid {
+            grid-template-columns: 1fr;
+          }
+        }
+        @media (min-width: 748px) {
+          .grid {
+            grid-template-columns: 1fr 1fr;
+          }
         }
       `}</style>
     </>

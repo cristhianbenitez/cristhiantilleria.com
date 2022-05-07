@@ -12,16 +12,16 @@ const about = () => {
           <h2>Who Am I ?</h2>
           <p>
             Hey there! I&apos;m Cristhian, a front-end developer and curious
-            introvert who tries contribute by building cool stuff on the web.
+            introvert who tries to help other creating websites.
           </p>
           <p>
             Currently, I&apos;m based in NYC. I spent much of my time educating
             myself to be able to give back to others. I like many things among
-            them, Javascript, photography, reading, trying to connect with new
-            people, and also trying to articulate my thoughts by writing and
-            making the most of what I learn. I really believe in the importance
-            of writing and being more articulate by writing, which also makes
-            you a better speaker.
+            them, javascript,design, photography, reading, trying to connect
+            with new people, and also trying to articulate my thoughts by
+            writing and making the most of what I learn. I really believe in the
+            importance of writing and being more articulate by writing, which
+            ables you to tell other about what you see and how you see it.
           </p>
         </section>
         <section className="avatar-section">
@@ -33,12 +33,6 @@ const about = () => {
               objectFit="cover"
             />
           </div>
-          <small className="image-caption">
-            I like to have some fun somethings{" "}
-          </small>
-        </section>
-        <section>
-          <h2>My interests</h2>
         </section>
       </Layout>
 

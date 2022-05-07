@@ -2,22 +2,29 @@
   {
     "image": "https://ik.imagekit.io/olxpctrmvr9/bitmarket?ik-sdk-version=javascript-1.4.3&updatedAt=1647205783271",
     "title": "Bit Market",
-    "description": "Built with React, Redux and React Router mainly. Bit Market is Single Page Application that provides an analysis of the crypto currencies market. Offering information about all the crypto currencies, their prices, display information thought graphs and information about any specific coin.",
+    "description": " Bit Market is Single Page Application that provides an analysis of the crypto currencies market",
     "live": "https://bitmarket.vercel.app/",
-    "repo": "https://github.com/cristhianbenitez/bitmarket"
+    "source": "https://github.com/cristhianbenitez/bitmarket"
   },
   {
     "image": "https://ik.imagekit.io/olxpctrmvr9/netflix-clone_Bd4Yj9mSkFkrX?ik-sdk-version=javascript-1.4.3&updatedAt=1647215625118",
     "title": "Netflix Clone",
     "description": "Built a Netflix Clone using React, React Route, Compound Components Architecture and Firabase.",
     "live": "https://netflixx-clone.vercel.app/",
-    "repo": "https://github.com/cristhianbenitez/my-netflix-clone"
+    "source": "https://github.com/cristhianbenitez/my-netflix-clone"
   },
   {
     "image": "https://ik.imagekit.io/olxpctrmvr9/easybankpage_uqmAZsir-vk-?ik-sdk-version=javascript-1.4.3&updatedAt=1647207396246",
     "title": "Easy Bank",
     "description": "Developed a Landing Page with HTML, CSS and JS",
     "live": "https://easybank-page.surge.sh/#",
-    "repo": "https://github.com/cristhianbenitez/html-websites/tree/main/easybank"
+    "source": "https://github.com/cristhianbenitez/html-websites/tree/main/easybank"
+  },
+  {
+    "image": "https://ik.imagekit.io/olxpctrmvr9/Nomad-Sun-_-A-travel-blog-featuring-the-most-beautiful-places-in-the-world-_JCMhGyeEm.png?ik-sdk-version=javascript-1.4.3&updatedAt=1651941022864",
+    "title": "Nomad Sun",
+    "description": "Nomad Sun is a travel blog featuring the most beautiful places in the world.",
+    "live": "https://nomadsun.xyz/",
+    "source": "https://github.com/cristhianbenitez/nomad-sun-wp"
   }
 ]

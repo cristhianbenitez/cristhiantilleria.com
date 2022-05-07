@@ -9,7 +9,7 @@ const links = [
     to: "/blog",
     label: "Writing",
   },
-  { to: "/mixtape", label: "Mixtape" },
+  // { to: "/mixtape", label: "Mixtape" },
   {
     to: "/books",
     label: "Books",

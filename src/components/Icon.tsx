@@ -15,8 +15,8 @@ const Icon = ({ source, link, name }: Props) => {
           <a>
             <Image
               src={source}
-              width={30}
-              height={30}
+              width={40}
+              height={40}
               alt={`icon for ${name}`}
             />
           </a>

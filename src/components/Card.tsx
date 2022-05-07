@@ -1,80 +1,98 @@
 import React from "react"
-import Image from "next/image"
-
-import Github from "@/assets/icons/github.svg"
-import Repo from "@/assets/icons/repository.svg"
 
 type Props = {
   image: string
   title: string
   description: string
   live: string
-  repo: string
+  source: string
 }
 
-const Card = (props: Props) => {
+const Card = ({ title, description, image, live, source }: Props) => {
   return (
     <>
-      <article className="card">
-        <div className="card-image">
-          {props.image && (
-            <Image
-              src={props.image}
-              alt={`image of ${props.title}`}
-              layout="fill"
-            />
-          )}
-        </div>
-        <div className="card-body">
-          <h2 className="card-title">{props.title}</h2>
-          <p className="card-description">{props.description}</p>
-          <div className="card-links">
-            <a className="card-icon" href={props.repo}>
-              <Image src={Github} width={30} height={30} alt="github link" />
+      <div className="card">
+        <div className="content">
+          <h1 className="header">{title}</h1>
+          <p className="text">{description}</p>
+          <div className="buttons">
+            <a
+              href={live ? live : "#"}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn"
+            >
+              Live Demo
             </a>
-            <a className="card-icon" href={props.live}>
-              <Image src={Repo} width={30} height={30} alt="github link" />
+            <a
+              href={source ? source : "#"}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn"
+            >
+              Source Code
             </a>
           </div>
         </div>
-      </article>
-      <style jsx>{`
-        .card {
-          background: #ffffff;
-          color: #000000;
-          width: 17rem;
-          height: 30rem;
-          border-radius: 12px;
-          padding: 1em 1em;
-          box-shadow: hsl(0, 100%, 100%, 0.1) 5px 5px 5px 5px;
-        }
-        .card-title {
-          margin: 0;
-        }
-        .card-body {
-          padding: 0 0.5em;
-        }
-        .card-image {
-          position: relative;
-          width: 100%;
-          height: 200px;
-          border-radius: 6px;
-          overflow: hidden;
-          margin-bottom: 0.5em;
-        }
-        .card-description {
-          font-size: 0.8rem;
-        }
-        .card-links {
-          display: flex;
-          justify-content: center;
-          gap: 2em;
-        }
-        .card-icon:hover,
-        .card-icon:focus {
-          transform: scale(1.09);
-        }
-      `}</style>
+      </div>
+      <style jsx>
+        {`
+          .card {
+            width: 100%;
+            height: 400px;
+            overflow: hidden !important;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: top;
+            background-image: ${`linear-gradient(to bottom, rgba(245, 246, 252, 0), rgba(0, 0, 0, 0.2)),url("${image}")`};
+          }
+
+          .card .content {
+            font-family: "Open Sans";
+            text-align: center;
+            padding: 10px;
+            opacity: 0;
+            transition: all 500ms ease-in-out;
+            transform: translate(0, 20px);
+          }
+          .card .content h1 {
+            font-size: 20px;
+            color: white;
+          }
+          .card .content p {
+            font-size: 14px;
+            color: white;
+            margin-bottom: 20px;
+          }
+
+          .card .content .btn {
+            background-color: black;
+            color: white;
+            padding: 10px;
+            font-size: 12px;
+            text-decoration: none;
+            border-radius: 6px;
+          }
+          .card:hover .content {
+            opacity: 1;
+            transform: translate(0, 0px);
+          }
+
+          .card:hover {
+            background-image: ${`linear-gradient(to bottom, rgba(245, 246, 252, 0), rgba(0, 0, 0, 1)),url("${image}")`};
+          }
+
+          .buttons {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+            justify-content: center;
+          }
+        `}
+      </style>
     </>
   )
 }
