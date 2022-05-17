@@ -26,7 +26,7 @@ export default function Home() {
   }
 
   return (
-    <Layout>
+    <Layout title="Home" hide>
       <Parallax ref={parallax} pages={4} style={{ top: "0", left: "0" }}>
         <ParallaxLayer
           factor={3}

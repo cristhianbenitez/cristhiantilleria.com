@@ -14,18 +14,21 @@ const Metatags = ({ title }: Props) => {
   const url = `${site.siteUrl}${pathname}`
 
   const pageTitle = title ? `${title} | ${site.title}` : site.title
+
   return (
     <Head>
       <title>{pageTitle}</title>
       {/* <!-- Primary Meta Tags --> */}
       <meta name="title" content={pageTitle} />
-      <meta name="description" content={description} />
+      {title === "Home" && <meta name="description" content={description} />}
 
       {/* <!-- Open Graph / Facebook --/> */}
       <meta property="og:type" content="website" />
       <meta property="og:url" content={url} />
       <meta property="og:title" content={pageTitle} />
-      <meta property="og:description" content={description} />
+      {title === "Home" && (
+        <meta property="og:description" content={description} />
+      )}
       <meta property="og:image" content={thumbnail} />
 
       {/* <!-- Twitter --> */}
