@@ -2,7 +2,7 @@ export default {
   name: 'Cristhian Benitez',
   headerTaglineOne: 'Hello 👋',
   headerTaglineTwo: "I'm Cristhian Benitez",
-  headerTaglineThree: 'Front-end developer based in New York. ',
+  headerTaglineThree: 'front-end developer based in New York. ',
 
   socials: [
     { title: 'Github', link: 'https://github.com/cristhianbenitez' },
