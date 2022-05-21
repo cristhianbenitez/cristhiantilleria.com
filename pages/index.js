@@ -1,15 +1,12 @@
 import { useRef } from 'react';
-import Link from 'next/link';
 import Header from '../components/Header';
 import ServiceCard from '../components/ServiceCard';
 import Socials from '../components/Socials';
 import WorkCard from '../components/WorkCard';
 
-// Local Data
-import data from '../yourData';
+import data from '../data';
 
 export default function Home() {
-  // Ref
   const workRef = useRef();
   const aboutRef = useRef();
 
