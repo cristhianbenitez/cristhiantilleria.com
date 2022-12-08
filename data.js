@@ -10,7 +10,7 @@ export default {
       title: 'LinkedIn',
       link: 'https://www.linkedin.com/in/cristhianbenitez/'
     },
-    { title: 'Twitter', link: 'https://twitter.com/pipebenitez25' },
+    { title: 'Twitter', link: 'https://twitter.com/pipeebenitez' },
     { title: 'Email', link: 'mailto:hello@cristhianbenitez.xyz' }
   ],
 
