@@ -47,5 +47,5 @@ export default {
   ],
 
   aboutpara:
-    "I'm a front-end developer and curious introvert based in New York. When I'm not creating websites and providing my services, mostly I'm trying to adquire new skills to be able to improve the quality of my work."
+    "I'm a front-end developer and curious introvert based in New York. When I'm not creating websites, I am reading books or learning about Graphic Design"
 };

@@ -42,7 +42,7 @@ export default function Home() {
         </h1>
         <Socials className="mt-5 mob:mt-2 laptop:mt-5" />
       </div>
-      <div
+      {/* <div
         className="mt-40 mob:mt-10 laptop:mt-40 mob:p-2 laptop:p-0"
         ref={workRef}
       >
@@ -70,7 +70,7 @@ export default function Home() {
             />
           ))}
         </div>
-      </div>
+      </div> */}
       <div
         className="mt-40 mob:mt-2 laptop:mt-40 mob:p-2 laptop:p-0"
         ref={aboutRef}
