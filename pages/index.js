@@ -42,37 +42,8 @@ export default function Home() {
         </h1>
         <Socials className="mt-5 mob:mt-2 laptop:mt-5" />
       </div>
-      {/* <div
-        className="mt-40 mob:mt-10 laptop:mt-40 mob:p-2 laptop:p-0"
-        ref={workRef}
-      >
-        <h1 className="text-2xl text-bold">Work.</h1>
-        <div className="mt-10 mob:mt-5 laptop:mt-10 grid grid-cols-2 mob:grid-cols-1 laptop:grid-cols-2 gap-4">
-          {data.projects.map((project, index) => (
-            <WorkCard
-              key={index}
-              img={project.imageSrc}
-              name={project.title}
-              description={project.description}
-              onClick={() => window.open(project.url)}
-            />
-          ))}
-        </div>
-      </div>
-      <div className="mt-40 mob:mt-2 laptop:mt-40 mob:p-2 laptop:p-0">
-        <h1 className="text-2xl text-bold">Services.</h1>
-        <div className="mt-10 grid grid-cols-2 mob:grid-cols-1 laptop:grid-cols-2 gap-6">
-          {data.services.map((service, index) => (
-            <ServiceCard
-              key={index}
-              name={service.title}
-              description={service.description}
-            />
-          ))}
-        </div>
-      </div> */}
       <div
-        className="mt-40 mob:mt-2 laptop:mt-40 mob:p-2 laptop:p-0"
+        className="mt-40 mob:mt-2 laptop:mt-10 mob:p-2 laptop:p-0"
         ref={aboutRef}
       >
         <h1 className="text-2xl text-bold">About.</h1>
@@ -80,7 +51,7 @@ export default function Home() {
           {data.aboutpara}
         </p>
       </div>
-      <div className="mt-40 mob:mt-5 laptop:mt-40 mob:p-2 laptop:p-0">
+      <div className="mt-40 mob:mt-5 laptop:mt-10 mob:p-2 laptop:p-0">
         <h1 className="text-2xl text-bold">Contact.</h1>
         <div className="mt-5">
           <Socials />
