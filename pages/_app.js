@@ -1,16 +1,11 @@
-import { Analytics } from '@vercel/analytics/react';
-import Metatags from '../components/Metatags/Metatags';
-import '../styles/globals.css';
-
-const gaId = process.env.NEXT_PUBLIC_GA_ID;
+import "../styles/globals.css";
+import { ThemeProvider } from "next-themes";
 
 const App = ({ Component, pageProps }) => {
   return (
-    <>
-      <Analytics />
-      <Metatags />
+    <ThemeProvider>
       <Component {...pageProps} />
-    </>
+    </ThemeProvider>
   );
 };
 

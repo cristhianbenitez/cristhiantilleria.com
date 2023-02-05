@@ -1,0 +1,104 @@
+{
+  "name": "Cristhian Benitez",
+  "headerTaglineOne": "Hello 👋",
+  "headerTaglineTwo": "I'm Cristhian Benitez ",
+  "headerTaglineThree": "designer and devloper",
+  "headerTaglineFour": " based in New York",
+  "showCursor": false,
+  "showBlog": true,
+  "darkMode": true,
+  "showResume": false,
+  "socials": [
+    {
+      "id": "1",
+      "title": "Github",
+      "link": "https://github.com/cristhianbenitez"
+    },
+    {
+      "id": "2",
+      "title": "LinkedIn",
+      "link": "https://www.linkedin.com/in/cristhianbenitez/"
+    },
+    {
+      "id": "3",
+      "title": "Twitter",
+      "link": "https://twitter.com/pipeebenitez"
+    },
+    {
+      "id": "5",
+      "title": "Email",
+      "link": "mailto:cristhiantilleria@gmail.com"
+    }
+  ],
+  "projects": [
+    {
+      "id": "6",
+      "title": "Bit Market",
+      "description": "Web Development",
+      "imageSrc": "https://www.dropbox.com/s/baksnohncfi8nre/bitmarket%20screenshot.png?raw=1",
+      "url": "https://bitmarket.vercel.app/"
+    },
+    {
+      "id": "1881387a-2291-4dba-bd7a-c1a8af9beed3",
+      "title": "Designo Agency",
+      "description": "Web Design & Development",
+      "imageSrc": "https://www.dropbox.com/s/bdtoaq6mjnfkzcm/Designo%20Screenshot.png?raw=1",
+      "url": "https://designo-site.vercel.app/"
+    },
+    {
+      "id": "6581f2d7-9830-4ebb-8866-8b2b03e85f4e",
+      "title": "Art Gallery",
+      "description": "Web Development",
+      "imageSrc": "https://www.dropbox.com/s/3mdc4r42wyxqbl4/Art%20Gallery%20Screenshot.png?raw=1",
+      "url": "https://art-gallery-wheat.vercel.app/"
+    },
+    {
+      "id": "6c6e03ff-01e4-4977-bd68-e4d843cee80a",
+      "title": "Home Planet",
+      "description": "Web Development & Animation",
+      "imageSrc": "https://www.dropbox.com/s/vjysl7k0cmm017b/My%20home%20planet.png?raw=1",
+      "url": "https://homeplanet.surge.sh/"
+    }
+  ],
+  "services": [
+    {
+      "id": "3",
+      "title": "Web Design",
+      "description": "We build and optimize your online presence.  Website is the digital entry point into your business and a powerful revenue channel."
+    },
+    {
+      "id": "0a82f0df-b3f2-44b2-bd84-2e60c82cb5cf",
+      "title": "Branding",
+      "description": "We design key brand elements such as the logo, color scheme, typography, and other design components that makes your brand stand out from competitors."
+    }
+  ],
+  "aboutpara": "I'm a front-end developer and curious human based in New York. Currently I'm available for freelance jobs",
+  "resume": {
+    "tagline": "👋  I'm a software engineer, product designer.",
+    "description": "I have delivered world-class user experiences to millions of people. Well-versed with React, Javascript, and most of the Web frameworks.",
+    "experiences": [
+      {
+        "id": "1",
+        "dates": "March 2022 - Present",
+        "type": "Full Time",
+        "position": "Frontend Engineer at X",
+        "bullets": "Bullet One, Bullet Two"
+      },
+      {
+        "id": "d495c23b-4f65-479a-9b8a-cfbc1c089725",
+        "dates": "July 2020 - March 2022",
+        "type": "Full Time",
+        "position": "Frontend Engineer at X",
+        "bullets": "Worked on the frontend of a React application, Worked on the frontend of a React application"
+      }
+    ],
+    "education": {
+      "universityName": "University X",
+      "universityDate": "2016-2020",
+      "universityPara": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&apos;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book"
+    },
+    "languages": [],
+    "frameworks": [],
+    "others": []
+  }
+}
