@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import Head from 'next/head';
 import Image from 'next/image';
 import Router, { useRouter } from 'next/router';
@@ -89,7 +90,7 @@ const Blog = ({ posts }) => {
                     key={post.slug}
                     onClick={() => Router.push(`/blog/${post.slug}`)}
                   >
-                    <Image
+                    <img
                       className="w-full h-60 rounded-lg shadow-lg object-cover"
                       src={post.image}
                       alt={post.title}

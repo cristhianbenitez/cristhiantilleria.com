@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import Image from 'next/image';
 import React from 'react';
 
@@ -11,11 +12,10 @@ const WorkCard = ({ img, name, description, onClick }) => {
         className="relative rounded-lg overflow-hidden transition-all ease-out duration-300 h-48 mob:h-auto"
         style={{ height: '600px' }}
       >
-        <Image
+        <img
           alt={name}
           className="h-full w-full object-cover hover:scale-110 transition-all ease-out duration-300"
           src={img}
-          fill
         />
       </div>
       <h1 className="mt-5 text-3xl font-medium">
