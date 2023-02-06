@@ -1,13 +1,14 @@
-import Head from "next/head";
-import Router, { useRouter } from "next/router";
-import { useEffect, useRef, useState } from "react";
-import { stagger } from "../../animations";
-import Button from "../../components/Button";
-import Cursor from "../../components/Cursor";
-import Header from "../../components/Header";
-import data from "../../data/portfolio.json";
-import { ISOToDate, useIsomorphicLayoutEffect } from "../../utils";
-import { getAllPosts } from "../../utils/api";
+import Head from 'next/head';
+import Image from 'next/image';
+import Router, { useRouter } from 'next/router';
+import { useEffect, useRef, useState } from 'react';
+import { stagger } from '../../animations';
+import Button from '../../components/Button';
+import Cursor from '../../components/Cursor';
+import Header from '../../components/Header';
+import data from '../../data/portfolio.json';
+import { ISOToDate, useIsomorphicLayoutEffect } from '../../utils';
+import { getAllPosts } from '../../utils/api';
 const Blog = ({ posts }) => {
   const showBlog = useRef(data.showBlog);
   const text = useRef();
@@ -17,11 +18,11 @@ const Blog = ({ posts }) => {
   useIsomorphicLayoutEffect(() => {
     stagger(
       [text.current],
-      { y: 40, x: -10, transform: "scale(0.95) skew(10deg)" },
-      { y: 0, x: 0, transform: "scale(1)" }
+      { y: 40, x: -10, transform: 'scale(0.95) skew(10deg)' },
+      { y: 0, x: 0, transform: 'scale(1)' }
     );
     if (showBlog.current) stagger([text.current], { y: 30 }, { y: 0 });
-    else router.push("/");
+    else router.push('/');
   }, []);
 
   useEffect(() => {
@@ -29,35 +30,35 @@ const Blog = ({ posts }) => {
   }, []);
 
   const createBlog = () => {
-    if (process.env.NODE_ENV === "development") {
-      fetch("/api/blog", {
-        method: "POST",
+    if (process.env.NODE_ENV === 'development') {
+      fetch('/api/blog', {
+        method: 'POST',
         headers: {
-          "Content-Type": "application/json",
-        },
+          'Content-Type': 'application/json'
+        }
       }).then(() => {
         router.reload(window.location.pathname);
       });
     } else {
-      alert("This thing only works in development mode.");
+      alert('This thing only works in development mode.');
     }
   };
 
   const deleteBlog = (slug) => {
-    if (process.env.NODE_ENV === "development") {
-      fetch("/api/blog", {
-        method: "DELETE",
+    if (process.env.NODE_ENV === 'development') {
+      fetch('/api/blog', {
+        method: 'DELETE',
         headers: {
-          "Content-Type": "application/json",
+          'Content-Type': 'application/json'
         },
         body: JSON.stringify({
-          slug,
-        }),
+          slug
+        })
       }).then(() => {
         router.reload(window.location.pathname);
       });
     } else {
-      alert("This thing only works in development mode.");
+      alert('This thing only works in development mode.');
     }
   };
   return (
@@ -69,7 +70,7 @@ const Blog = ({ posts }) => {
         </Head>
         <div
           className={`container mx-auto mb-10 ${
-            data.showCursor && "cursor-none"
+            data.showCursor && 'cursor-none'
           }`}
         >
           <Header isBlog={true}></Header>
@@ -88,24 +89,24 @@ const Blog = ({ posts }) => {
                     key={post.slug}
                     onClick={() => Router.push(`/blog/${post.slug}`)}
                   >
-                    <img
+                    <Image
                       className="w-full h-60 rounded-lg shadow-lg object-cover"
                       src={post.image}
                       alt={post.title}
-                    ></img>
+                    />
                     <h2 className="mt-5 text-4xl">{post.title}</h2>
                     <p className="mt-2 opacity-50 text-lg">{post.preview}</p>
                     <span className="text-sm mt-5 opacity-25">
                       {ISOToDate(post.date)}
                     </span>
-                    {process.env.NODE_ENV === "development" && mounted && (
+                    {process.env.NODE_ENV === 'development' && mounted && (
                       <div className="absolute top-0 right-0">
                         <Button
                           onClick={(e) => {
                             deleteBlog(post.slug);
                             e.stopPropagation();
                           }}
-                          type={"primary"}
+                          type={'primary'}
                         >
                           Delete
                         </Button>
@@ -116,10 +117,10 @@ const Blog = ({ posts }) => {
             </div>
           </div>
         </div>
-        {process.env.NODE_ENV === "development" && mounted && (
+        {process.env.NODE_ENV === 'development' && mounted && (
           <div className="fixed bottom-6 right-6">
-            <Button onClick={createBlog} type={"primary"}>
-              Add New Post +{" "}
+            <Button onClick={createBlog} type={'primary'}>
+              Add New Post +{' '}
             </Button>
           </div>
         )}
@@ -130,18 +131,18 @@ const Blog = ({ posts }) => {
 
 export async function getStaticProps() {
   const posts = getAllPosts([
-    "slug",
-    "title",
-    "image",
-    "preview",
-    "author",
-    "date",
+    'slug',
+    'title',
+    'image',
+    'preview',
+    'author',
+    'date'
   ]);
 
   return {
     props: {
-      posts: [...posts],
-    },
+      posts: [...posts]
+    }
   };
 }
 

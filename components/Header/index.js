@@ -5,6 +5,7 @@ import React, { useEffect, useState } from 'react';
 import Button from '../Button';
 // Local Data
 import data from '../../data/portfolio.json';
+import Image from 'next/image';
 
 const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
   const router = useRouter();
@@ -37,17 +38,19 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
                       setTheme(theme === 'dark' ? 'light' : 'dark')
                     }
                   >
-                    <img
+                    <Image
+                      alt="dark or light theme icon"
                       className="h-6"
                       src={`/images/${
                         theme === 'dark' ? 'moon.svg' : 'sun.svg'
                       }`}
-                    ></img>
+                    />
                   </Button>
                 )}
 
                 <Popover.Button>
-                  <img
+                  <Image
+                    alt="dark and light icon"
                     className="h-5"
                     src={`/images/${
                       !open
@@ -58,7 +61,7 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
                         ? 'cancel.svg'
                         : 'cancel-white.svg'
                     }`}
-                  ></img>
+                  />
                 </Popover.Button>
               </div>
             </div>
@@ -156,10 +159,11 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
               <Button
                 onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
               >
-                <img
+                <Image
                   className="h-6"
                   src={`/images/${theme === 'dark' ? 'moon.svg' : 'sun.svg'}`}
-                ></img>
+                  alt="moon or sun icon"
+                />
               </Button>
             )}
           </div>
@@ -188,10 +192,11 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
               <Button
                 onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
               >
-                <img
+                <Image
+                  alt="moon or sun icon"
                   className="h-6"
                   src={`/images/${theme === 'dark' ? 'moon.svg' : 'sun.svg'}`}
-                ></img>
+                />
               </Button>
             )}
           </div>
