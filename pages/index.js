@@ -1,18 +1,18 @@
-import { useRef } from "react";
-import Header from "../components/Header";
-import ServiceCard from "../components/ServiceCard";
-import Socials from "../components/Socials";
-import WorkCard from "../components/WorkCard";
-import { useIsomorphicLayoutEffect } from "../utils";
-import { stagger } from "../animations";
-import Footer from "../components/Footer";
-import Head from "next/head";
-import Button from "../components/Button";
-import Link from "next/link";
-import Cursor from "../components/Cursor";
+import { useRef } from 'react';
+import Header from '../components/Header';
+import ServiceCard from '../components/ServiceCard';
+import Socials from '../components/Socials';
+import WorkCard from '../components/WorkCard';
+import { useIsomorphicLayoutEffect } from '../utils';
+import { stagger } from '../animations';
+import Footer from '../components/Footer';
+import Head from 'next/head';
+import Button from '../components/Button';
+import Link from 'next/link';
+import Cursor from '../components/Cursor';
 
 // Local Data
-import data from "../data/portfolio.json";
+import data from '../data/portfolio.json';
 
 export default function Home() {
   // Ref
@@ -28,7 +28,7 @@ export default function Home() {
     window.scrollTo({
       top: workRef.current.offsetTop,
       left: 0,
-      behavior: "smooth",
+      behavior: 'smooth'
     });
   };
 
@@ -36,20 +36,20 @@ export default function Home() {
     window.scrollTo({
       top: aboutRef.current.offsetTop,
       left: 0,
-      behavior: "smooth",
+      behavior: 'smooth'
     });
   };
 
   useIsomorphicLayoutEffect(() => {
     stagger(
       [textOne.current, textTwo.current, textThree.current, textFour.current],
-      { y: 40, x: -10, transform: "scale(0.95) skew(10deg)" },
-      { y: 0, x: 0, transform: "scale(1)" }
+      { y: 40, x: -10, transform: 'scale(0.95) skew(10deg)' },
+      { y: 0, x: 0, transform: 'scale(1)' }
     );
   }, []);
 
   return (
-    <div className={`relative ${data.showCursor && "cursor-none"}`}>
+    <div className={`relative ${data.showCursor && 'cursor-none'}`}>
       {data.showCursor && <Cursor />}
       <Head>
         <title>{data.name}</title>
@@ -122,7 +122,7 @@ export default function Home() {
           </div>
         </div>
         {/* This button should not go into production */}
-        {process.env.NODE_ENV === "development" && (
+        {process.env.NODE_ENV === 'development' && (
           <div className="fixed bottom-5 right-5">
             <Link href="/edit">
               <Button type="primary">Edit Data</Button>
