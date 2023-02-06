@@ -1,6 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
 import Head from 'next/head';
-import Image from 'next/image';
 import Router, { useRouter } from 'next/router';
 import { useEffect, useRef, useState } from 'react';
 import { stagger } from '../../animations';
