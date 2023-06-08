@@ -1,0 +1,14 @@
+.navigation {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.navigation__item {
+  align-self: end;
+  border: 1px solid black;
+}
+
+.navigation__item > a {
+  text-decoration: none;
+  color: inherit;
+}

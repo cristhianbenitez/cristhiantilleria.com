@@ -1,25 +1,22 @@
 {
-  "name": "cristhianbenitez.me",
-  "version": "2.0.0",
-  "description": "cristhian benitez portfolio",
-  "main": "next.config.js",
-  "type": "module",
+  "name": "cristhianbenitez",
+  "version": "0.1.0",
+  "private": true,
   "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "preview": "vite preview"
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/cristhianbenitez/cristhianbenitez.me.git"
-  },
-  "author": "Cristhian Benitez",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/cristhianbenitez/cristhianbenitez.me/issues"
-  },
-  "homepage": "https://github.com/cristhianbenitez/cristhianbenitez.me#readme",
   "dependencies": {
-    "vite": "^4.1.4"
+    "@types/node": "20.2.5",
+    "@types/react": "18.2.8",
+    "@types/react-dom": "18.2.4",
+    "eslint": "8.42.0",
+    "eslint-config-next": "13.4.4",
+    "next": "13.4.4",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "typescript": "5.1.3"
   }
 }
