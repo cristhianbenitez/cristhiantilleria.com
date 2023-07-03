@@ -1,4 +1,16 @@
 .container {
-  max-width: 1440px;
-  margin: 0 auto;
+  max-width: 90rem;
+  margin-inline: 0.625rem;
+}
+
+@media (min-width: 764px) {
+  .container {
+    margin-inline: 0.9375rem;
+  }
+}
+
+@media (min-width: 1460px) {
+  .container {
+    margin-inline: auto;
+  }
 }

@@ -1,0 +1,22 @@
+.carousel {
+}
+
+.carousel {
+  position: relative;
+}
+
+.carousel__item {
+  height: 80svh;
+  width: fit-content;
+  object-fit: cover;
+  position: relative;
+  border: 1px solid black;
+}
+
+.carousel__item img {
+  object-fit: cover;
+}
+
+.prevArrow::before {
+  content: '';
+}
