@@ -4,20 +4,28 @@
   grid-template-columns: 1fr;
   position: relative;
   padding-block: 0.5rem;
+  margin-bottom: 15px;
 }
 
 .nav__item {
   font-size: 2.15rem;
   font-weight: 400;
-  align-self: end;
+  align-self: center;
   letter-spacing: -0.25px;
   display: flex;
   gap: 10px;
 }
 
-.nav__item > a {
+.nav__item > a,
+.nav__item_icon > a {
   text-decoration: none;
   color: inherit;
+}
+
+.nav__item_icon {
+  display: flex;
+  position: absolute;
+  inset-inline-end: 0;
 }
 
 .nav__item:first-child {
@@ -34,6 +42,7 @@
 @media (min-width: 500px) {
   .nav__item {
     font-size: 2.875rem;
+    margin-bottom: none;
   }
   .nav__item_icon > svg {
     height: 48px;
@@ -46,13 +55,9 @@
     gap: 20px;
     grid-template-columns: 1fr 1fr;
   }
-  .nav__item_icon {
-    position: absolute;
-    inset-inline-end: 0;
-  }
+
   .nav__item {
     align-self: center;
-    justify-content: flex-end;
 
     font-size: 2.75rem;
     padding-top: 1.5rem;

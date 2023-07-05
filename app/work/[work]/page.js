@@ -1,66 +1,91 @@
 'use client';
 import React from 'react';
-import Slider from 'react-slick';
 import Image from 'next/image';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Autoplay, Pagination, Navigation } from 'swiper/modules';
+import { BsArrowRight } from 'react-icons/bs';
 
 import styles from './work.module.css';
-import 'slick-carousel/slick/slick.css';
-import 'slick-carousel/slick/slick-theme.css';
+import 'swiper/css';
+import 'swiper/css/pagination';
+import 'swiper/css/navigation';
+import Link from 'next/link';
 
-function SampleNextArrow(props) {
-  const { className, style, onClick } = props;
-  return (
-    <div
-      className={className}
-      style={{ ...style, display: 'block', background: 'red' }}
-      onClick={onClick}
-    />
-  );
-}
-
-function SamplePrevArrow(props) {
-  const { className, style, onClick } = props;
-  return (
-    <div
-      className={styles.prevArrow}
-      style={{ ...style, display: 'block', background: 'green' }}
-      onClick={onClick}
-    >
-      a
-    </div>
-  );
-}
-
-export default function Work({ params }) {
-  const settings = {
-    infinite: true,
-    speed: 500,
-    cssEase: 'cubic-bezier(0.65, 0, 0.35, 1)',
-    nextArrow: <SampleNextArrow />,
-    prevArrow: <SamplePrevArrow />
-  };
-
+export default function Work({}) {
   return (
     <div>
-      {params.work}
-      <h2> Single Item</h2>
-      <Slider {...settings} className={styles.carousel}>
-        <div className={styles.carousel__item}>
-          <Image priority src="/assets/image01.jpg" fill />
+      <section className={styles.projectInformation}>
+        <div className={styles.projectInformation_services}>
+          <span>1. Aliquam accumsan</span>
+          <span>2. Cras quis</span>
+          <span>3. Nunc lobortis Metus</span>
         </div>
-        <div className={styles.carousel__item}>
-          <Image priority src="/assets/image01.jpg" fill />
+
+        <div className={styles.projectInformation_description}>
+          <h3>Nullam Consectetur</h3>
+          <p>
+            Nullam consectetur semper tortor sit amet rutrum. Morbi sed felis
+            volutpat, vulputate justo et, pharetra mi. Phasellus ac velit nec
+            diam dapibus porttitor nec quis elit. Proin arcu est, accumsan ac
+            orci molestie, placerat efficitur purus. Vivamus non purus
+            ullamcorper, maximus purus vitae, mollis ante. Donec sed ex dui.
+            Nullam consectetur semper tortor sit amet rutrum. Morbi sed felis
+            volutpat, vulputate justo et, pharetra mi.
+          </p>
         </div>
-        <div className={styles.carousel__item}>
-          <Image priority src="/assets/image01.jpg" fill />
+      </section>
+
+      <Swiper
+        slidesPerView={1}
+        spaceBetween={30}
+        loop={true}
+        autoplay={{
+          delay: 3000,
+          pauseOnMouseEnter: true
+        }}
+        pagination={{
+          clickable: true
+        }}
+        navigation={true}
+        modules={[Autoplay, Pagination, Navigation]}
+        className={styles.carousel}
+      >
+        <SwiperSlide className={styles.carousel__item}>
+          <Image priority src="/assets/mockup.jpg" fill />
+        </SwiperSlide>
+        <SwiperSlide className={styles.carousel__item}>
+          <Image priority src="/assets/mockup.jpg" fill />
+        </SwiperSlide>
+        <SwiperSlide className={styles.carousel__item}>
+          <Image priority src="/assets/mockup.jpg" fill />
+        </SwiperSlide>
+        <SwiperSlide className={styles.carousel__item}>
+          <Image priority src="/assets/mockup.jpg" fill />
+        </SwiperSlide>
+        <SwiperSlide className={styles.carousel__item}>
+          <Image priority src="/assets/mockup.jpg" fill />
+        </SwiperSlide>
+      </Swiper>
+
+      <section className={styles.bottomImages}>
+        <div>
+          <Image priority src="/assets/mockup.jpg" width={500} height={400} />
         </div>
-        <div className={styles.carousel__item}>
-          <Image priority src="/assets/cristhian-benitez.jpg" fill />
+        <div>
+          <Image priority src="/assets/mockup.jpg" width={500} height={400} />
         </div>
-        <div className={styles.carousel__item}>
-          <Image priority src="/assets/image01.jpg" fill />
-        </div>
-      </Slider>
+        <span className={styles.bottomNavigationBtn}>
+          <Link href="/" rel="home_page">
+            Index
+          </Link>
+        </span>
+
+        <span className={styles.bottomNavigationBtn}>
+          <Link href="#" rel="next_page">
+            Next <BsArrowRight />
+          </Link>
+        </span>
+      </section>
     </div>
   );
 }

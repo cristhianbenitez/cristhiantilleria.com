@@ -78,3 +78,10 @@ h6 {
 MY CSS
 ============
 */
+
+/* PROJECT SLIDER ARROW COLOR */
+:root {
+  --swiper-navigation-color: #fff;
+  --swiper-pagination-bullet-inactive-color: #fff;
+  --swiper-pagination-color: #fff;
+}
