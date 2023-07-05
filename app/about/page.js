@@ -7,12 +7,14 @@ export default function About() {
   return (
     <main className={styles.about}>
       <section className={styles.about__column} grid-col="1">
-        <Image
-          priority
-          src="/assets/cristhian-benitez.jpg"
-          height={320}
-          width={320}
-        />
+        <div className={styles.about__headshot}>
+          <Image
+            priority
+            src="/assets/cristhiantilleria.png"
+            height={320}
+            width={320}
+          />
+        </div>
         <div className={styles.about__socials}>
           <a href="">
             <BsArrowRight />

@@ -30,7 +30,7 @@ export default function Navigation() {
         </div>
       </div>
       <div className={styles.nav__item}>
-        <Link href={'/'}>About</Link>
+        <Link href={'/about'}>About</Link>
       </div>
     </nav>
   );

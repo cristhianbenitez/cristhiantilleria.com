@@ -6,9 +6,16 @@
   margin-bottom: 2rem;
 }
 
-.about img {
+.about__headshot {
+  height: 250px;
+  margin-bottom: 0.5rem;
+}
+
+.about__headshot img {
   width: 100%;
-  height: auto;
+  height: 100%;
+  object-fit: cover;
+  object-position: 75% 25%;
   margin-block-end: 1rem;
 }
 
