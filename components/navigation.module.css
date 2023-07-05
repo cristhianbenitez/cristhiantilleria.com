@@ -26,6 +26,7 @@
   display: flex;
   position: absolute;
   inset-inline-end: 0;
+  gap: 10px;
 }
 
 .nav__item:first-child {

@@ -1,7 +1,7 @@
 .about {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: (1fr, 1fr);
+  grid-template-rows: 1fr, 1fr;
   gap: 15px;
   margin-bottom: 2rem;
 }
@@ -36,14 +36,24 @@
 .about__headline {
   font-weight: 500;
   line-height: 1.25;
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
+}
+
+.about__description {
+  font-size: 1.2rem;
+}
+
+.about__description > ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 @media (min-width: 764px) {
   .about {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: repeat(3, 1fr);
+    grid-template-rows: 1fr;
     gap: 20px;
   }
 

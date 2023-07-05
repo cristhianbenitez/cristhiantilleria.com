@@ -16,27 +16,42 @@ export default function About() {
           />
         </div>
         <div className={styles.about__socials}>
-          <a href="">
+          <a href="mailto:cristhiantilleria@gmail.com">
             <BsArrowRight />
             &nbsp; Email
           </a>
-          <a href="">
+          <a href="https://www.instagram.com/cristhiantilleria25">
             <BsArrowRight />
             &nbsp; Instagram
           </a>
-          <a href="">
+          <a href="https://www.linkedin.com/in/cristhianbenitez/">
             <BsArrowRight />
-            &nbsp; Twitter
+            &nbsp; LinkedIn
           </a>
         </div>
       </section>
       <section className={styles.about__column} grid-col="2">
         <h2 className={styles.about__headline}>
-          Cristhian Benitez is a Designer graduated from Shillington School of
-          Design, currently based in New York. His works has an with an emphasis
-          on visual identity, typography, and UI/UX.
+          Cristhian, a Freelance Graphic Designer in New York, ho has developed
+          a strong passion for design. With an insatiable thirst for knowledge,
+          he constantly seeks improvement. Previously, he believed creativity
+          was exclusive to a select few, but his immersion in the design world
+          unveiled a deep fascination for art and design. Motivated by a strong
+          work ethic, Cristhian wholeheartedly dedicates himself to crafting
+          brand identities, websites, and print designs, eagerly embracing any
+          other opportunities that come his way.
         </h2>
-        <p></p>
+        <div className={styles.about__description}>
+          <h3>Services:</h3>
+          <ul>
+            <li>Branding Design</li>
+            <li>Logo Design</li>
+            <li>Editorial Design</li>
+            <li>App Design</li>
+            <li>Web Design</li>
+            <li>Front-End Web Development</li>
+          </ul>
+        </div>
       </section>
     </main>
   );

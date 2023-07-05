@@ -7,7 +7,7 @@ import {
   AiOutlineInstagram
 } from 'react-icons/ai';
 
-import { RiLinkedinFill, RiInstagramLine, RiMailLine } from 'react-icons/ri';
+import { RiBehanceFill, RiInstagramLine } from 'react-icons/ri';
 
 export default function Navigation() {
   return (
@@ -23,9 +23,9 @@ export default function Navigation() {
           </Link>
           <Link
             target="_blank"
-            href={'https://www.linkedin.com/in/cristhianbenitez/'}
+            href={'https://www.behance.net/cristhiantilleria'}
           >
-            <RiLinkedinFill />
+            <RiBehanceFill />
           </Link>
         </div>
       </div>
