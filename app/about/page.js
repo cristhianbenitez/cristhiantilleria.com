@@ -32,21 +32,21 @@ export default function About() {
       </section>
       <section className={styles.about__column} grid-col="2">
         <h2 className={styles.about__headline}>
-          Cristhian, a Freelance Graphic Designer in New York, ho has developed
+          Cristhian, a Freelance Graphic Designer in New York, who has developed
           a strong passion for design. With an insatiable thirst for knowledge,
-          he constantly seeks improvement. Previously, he believed creativity
+          he constantly seeks improvement. Previous to Shillington, he believed creativity
           was exclusive to a select few, but his immersion in the design world
           unveiled a deep fascination for art and design. Motivated by a strong
           work ethic, Cristhian wholeheartedly dedicates himself to crafting
-          brand identities, websites, and print designs, eagerly embracing any
+          brand identities, websites and print designs, eagerly embracing any
           other opportunities that come his way.
         </h2>
         <div className={styles.about__description}>
           <h3>Services:</h3>
           <ul>
-            <li>Branding Design</li>
+            <li>Brand Identity</li>
             <li>Logo Design</li>
-            <li>Editorial Design</li>
+            <li>Print Design</li>
             <li>App Design</li>
             <li>Web Design</li>
             <li>Front-End Web Development</li>

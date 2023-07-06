@@ -1,3 +1,5 @@
+/* TODO make navigation stick at the top */
+
 .nav {
   display: grid;
   grid-template-rows: 1fr;
@@ -43,10 +45,12 @@
 @media (min-width: 500px) {
   .nav__item {
     font-size: 2.875rem;
-    margin-bottom: none;
   }
   .nav__item_icon > svg {
     height: 48px;
+  }
+  .nav {
+    margin-bottom: 0;
   }
 }
 
@@ -59,7 +63,6 @@
 
   .nav__item {
     align-self: center;
-
     font-size: 2.75rem;
     padding-top: 1.5rem;
     padding-bottom: 1.5rem;
