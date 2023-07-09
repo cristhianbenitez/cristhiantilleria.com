@@ -16,19 +16,8 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={`${inter.className} ${styles.container}`}>
-        {/* <Navigation />
-        {children} */}
-        <div
-          style={{
-            height: '100vh',
-            width: '100%',
-            display: 'flex',
-            justifyContent: 'center',
-            alignItems: 'center'
-          }}
-        >
-          Work in Progress
-        </div>
+        <Navigation />
+        {children}
       </body>
     </html>
   );
