@@ -3,10 +3,7 @@
   grid-template-columns: 1fr;
   grid-template-rows: repeat(6, 1fr);
   gap: 15px;
-  margin-bottom: 2rem;
-}
-
-.work_item {
+  margin-bottom: 3rem;
 }
 
 .work_item a,
