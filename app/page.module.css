@@ -53,6 +53,13 @@
     grid-template-rows: repeat(3, 1fr);
     gap: 25px;
   }
+  .work__item__thumbnail {
+    height: 100%;
+    max-height: 480px;
+    overflow: hidden;
+    object-fit: cover;
+    position: relative;
+  }
 }
 
 @media (min-width: 1024px) {
