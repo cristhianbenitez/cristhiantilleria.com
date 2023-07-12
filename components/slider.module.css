@@ -1,0 +1,22 @@
+.carousel {
+  position: relative;
+  margin-bottom: 30px;
+  height: 100%;
+}
+
+.carousel__item {
+  position: relative;
+  height: 80vw;
+  max-height: 850px;
+}
+.carousel__item img {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+
+@media (min-width: 1460px) {
+  .carousel__item {
+  }
+}

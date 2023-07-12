@@ -37,16 +37,22 @@
   font-weight: 500;
   line-height: 1.25;
   margin-bottom: 2rem;
+  font-size: 1.3rem;
 }
 
-.about__description {
+.about__services {
   font-size: 1.2rem;
 }
 
-.about__description > ul {
+.about__services > ul {
   list-style: none;
   margin: 0;
   padding: 0;
+}
+
+.about__services__title {
+  font-weight: 500;
+  margin-bottom: 0.4rem;
 }
 
 @media (min-width: 764px) {
@@ -62,6 +68,10 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 20px;
+  }
+
+  .about__headline {
+    font-size: 1.5rem;
   }
 }
 

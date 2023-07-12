@@ -1,29 +1,51 @@
 import Link from 'next/link';
 import styles from './page.module.css';
 import Image from 'next/image';
-import Footer from '@/components/footer';
 
-const works = [
-  { name: 'box-1' },
-  { name: 'box-2' },
-  { name: 'box-3' },
-  { name: 'box-4' },
-  { name: 'box-5' },
-  { name: 'box-6' }
-];
+import fs from 'fs';
+import path from 'path';
+import matter from 'gray-matter';
 
 export default function Home() {
+  const projectDir = 'projects';
+  const files = fs.readdirSync(path.join(projectDir));
+
+  const projects = files.map((filename) => {
+    const fileContent = fs.readFileSync(
+      path.join(projectDir, filename),
+      'utf-8'
+    );
+    const { data: frontMatter } = matter(fileContent);
+    return {
+      meta: frontMatter,
+      slug: filename.replace('.mdx', '')
+    };
+  });
+
   return (
     <main className={styles.work}>
-      {works.map((props) => {
-        return (
-          <section className={styles.work_item}>
-            <Link href={`work/${props.name}`}>
-              <Image priority src="/assets/block.svg" height={32} width={32} />
-            </Link>
-          </section>
-        );
-      })}
+      {projects.map((project) => (
+        <div className={styles.work__item}>
+          <Link href={`/projects/${project.slug}`} passHref key={project.slug}>
+            <Image
+              priority
+              src={project.meta.thumbnail}
+              alt={project.meta?.thumbnailAlt && project.meta.thumbnailAlt}
+              height={1000}
+              width={1000}
+              className={styles.work__item__thumbnail}
+            />
+            <div className={styles.work_item_bottomText}>
+              <span className={styles.work_item_title}>
+                {project.meta.title}
+              </span>
+              <span className={styles.work_item_title}>
+                {project.meta.type}
+              </span>
+            </div>
+          </Link>
+        </div>
+      ))}
     </main>
   );
 }
