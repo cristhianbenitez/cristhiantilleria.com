@@ -34,15 +34,15 @@ export default function About() {
         <h2 className={styles.about__headline}>
           Cristhian, a Freelance Graphic Designer in New York, who has developed
           a strong passion for design. With an insatiable thirst for knowledge,
-          he constantly seeks improvement. Previous to Shillington, he believed creativity
-          was exclusive to a select few, but his immersion in the design world
-          unveiled a deep fascination for art and design. Motivated by a strong
-          work ethic, Cristhian wholeheartedly dedicates himself to crafting
-          brand identities, websites and print designs, eagerly embracing any
-          other opportunities that come his way.
+          he constantly seeks improvement. Previous to Shillington, he believed
+          creativity was exclusive to a select few, but his immersion in the
+          design world unveiled a deep fascination for art and design. Motivated
+          by a strong work ethic, Cristhian wholeheartedly dedicates himself to
+          crafting brand identities, websites and print designs, eagerly
+          embracing any other opportunities that come his way.
         </h2>
-        <div className={styles.about__description}>
-          <h3>Services:</h3>
+        <div className={styles.about__services}>
+          <h3 className={styles.about__services__title}>Services:</h3>
           <ul>
             <li>Brand Identity</li>
             <li>Logo Design</li>
