@@ -26,7 +26,12 @@ export default function Home() {
     <main className={styles.work}>
       {projects.map((project) => (
         <div className={styles.work__item}>
-          <Link href={`/projects/${project.slug}`} passHref key={project.slug}>
+          <Link
+            href={`/projects/${project.slug}`}
+            className={styles.work__item__link}
+            passHref
+            key={project.slug}
+          >
             <Image
               priority
               src={project.meta.thumbnail}
