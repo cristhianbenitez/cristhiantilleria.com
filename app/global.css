@@ -86,3 +86,21 @@ MY CSS
   --swiper-pagination-bullet-inactive-color: #fff;
   --swiper-pagination-color: #fff;
 }
+
+h1 {
+  font-size: 2.15rem;
+  font-weight: 400;
+  letter-spacing: -0.25px;
+}
+
+@media (min-width: 500px) {
+  h1 {
+    font-size: 2.875rem;
+  }
+}
+@media (min-width: 768px) {
+  h1 {
+    align-self: center;
+    font-size: 2.75rem;
+  }
+}

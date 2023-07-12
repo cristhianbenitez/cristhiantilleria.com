@@ -9,7 +9,9 @@ export default function Navigation() {
     <nav className={styles.nav}>
       <div className={styles.nav__item}>
         {/* TODO Add underline on hovering */}
-        <Link href="/">Cristhian Tilleria</Link>
+        <Link href="/">
+          <h1>Cristhian Tilleria</h1>
+        </Link>
         <div className={styles.nav__item_socials}>
           <Link
             target="_blank"
