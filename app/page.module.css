@@ -14,7 +14,6 @@
   position: relative;
   max-inline-size: 100%;
   block-size: auto;
-  aspect-ratio: 1 / 1;
 }
 
 .work__item {
