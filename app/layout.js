@@ -11,7 +11,16 @@ const inter = Inter({ subsets: ['latin'] });
 export const metadata = {
   title: 'Cristhian Benitez - Freelance Designer',
   description:
-    'Freelance Designer based in New York, interested in crafting brand identities, websites, apps, and print designs.'
+    'Freelance Designer based in New York with a focus creating brand identities, websites, apps, and print designs.',
+  keywords: [
+    'graphic design',
+    'design',
+    'new york graphic designer',
+    'freelance graphic designer',
+    'brand identity',
+    'web design',
+    'print design'
+  ]
 };
 
 export default function RootLayout({ children }) {

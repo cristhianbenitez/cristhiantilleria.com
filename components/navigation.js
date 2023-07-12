@@ -2,13 +2,10 @@ import React from 'react';
 import Link from 'next/link';
 import styles from './navigation.module.css';
 
-import { RiBehanceFill, RiInstagramLine } from 'react-icons/ri';
-
 export default function Navigation() {
   return (
     <nav className={styles.nav}>
       <div className={styles.nav__item}>
-        {/* TODO Add underline on hovering */}
         <Link href="/">
           <h1>Cristhian Tilleria</h1>
         </Link>
