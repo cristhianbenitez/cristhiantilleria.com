@@ -15,16 +15,11 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <>
-      <Head>
-        <link rel="icon" href="/icon/icon.svg" type="image/svg" />
-      </Head>
-      <html lang="en">
-        <body className={`${inter.className} ${styles.container}`}>
-          <Navigation />
-          {children}
-        </body>
-      </html>
-    </>
+    <html lang="en">
+      <body className={`${inter.className} ${styles.container}`}>
+        <Navigation />
+        {children}
+      </body>
+    </html>
   );
 }
