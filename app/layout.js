@@ -11,7 +11,7 @@ const inter = Inter({ subsets: ['latin'] });
 export const metadata = {
   title: 'Cristhian Benitez - Freelance Designer',
   description:
-    'Freelance Designer based in New York with a focus creating brand identities, websites, apps, and print designs.',
+    'Freelance Graphic Designer based in New York, specializing in brand identities, web design, app design and print design. With a passion for creative solutions and a keen eye for detail',
   keywords: [
     'graphic design',
     'design',
