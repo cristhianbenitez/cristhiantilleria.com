@@ -44,35 +44,17 @@ function getProject({ slug }) {
 export default function Work({ params }) {
   const { data } = getProject(params);
 
-  const projectDir = 'projects';
-  const files = fs.readdirSync(path.join(projectDir));
-
-  const projects = files.map((filename) => {
-    return { projects: filename.replace('.mdx', '') };
-  });
-
-  console.log(projects['level-up']);
-  console.log(params.slug);
-
-  // const prevPage =
-  //   currentPage === 1 ? `/projects` : `/projects/${currentPage - 1}`;
-
-  // const nextPage =
-  //   currentPage === numPages
-  //     ? `/projects/${currentPage}`
-  //     : `/projects/${currentPage + 1}`;
-
   return (
     <div>
       <section className={styles.projectInformation}>
         <div className={styles.projectInformation_services}>
-          <span>1. Aliquam accumsan</span>
-          <span>2. Cras quis</span>
-          <span>3. Nunc lobortis Metus</span>
+          {data.services.map((service) => (
+            <span>{service}</span>
+          ))}
         </div>
 
         <div className={styles.projectInformation_description}>
-          <h3>Nullam Consectetur</h3>
+          <h3>{data.title}</h3>
           <p>{data.description}</p>
         </div>
       </section>
@@ -84,7 +66,6 @@ export default function Work({ params }) {
       <section className={styles.bottomImages}>
         {data?.bottomImages && (
           <>
-            {' '}
             <div>
               <Image
                 priority
