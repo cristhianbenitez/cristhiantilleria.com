@@ -10,7 +10,7 @@ export default function About() {
         <div className={styles.about__headshot}>
           <Image
             priority
-            src="/assets/cristhiantilleria.png"
+            src="/assets/cristhiantilleria.jpg"
             height={320}
             width={320}
           />
