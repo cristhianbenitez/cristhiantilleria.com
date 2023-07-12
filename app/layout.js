@@ -9,7 +9,7 @@ import Head from 'next/head';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata = {
-  title: 'Cristhian Benitez - Freelance Designer',
+  title: 'Cristhian Benitez - Freelance Graphic Designer',
   description:
     'Freelance Graphic Designer based in New York, specializing in brand identities, web design, app design and print design. With a passion for creative solutions and a keen eye for detail',
   keywords: [
