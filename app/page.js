@@ -25,6 +25,7 @@ export default function Home() {
   return (
     <>
       <main className={styles.work}>
+        <h2 className={styles.headline}>Freelance Graphic Designer</h2>
         {projects.map((project, i) => (
           <Box key={project.slug} project={project} />
         ))}

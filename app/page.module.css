@@ -6,6 +6,10 @@
   /* margin-bottom: 3rem; */
 }
 
+.headline {
+  display: none;
+}
+
 @media (min-width: 764px) {
   .work {
     display: grid;
