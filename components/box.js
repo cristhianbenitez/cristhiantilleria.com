@@ -16,7 +16,6 @@ export default function Box({ project }) {
       >
         <div className={styles.box__thumbnail__container}>
           <Image
-            priority
             src={project.meta.thumbnail}
             alt={project.meta?.thumbnailAlt && project.meta.thumbnailAlt}
             height={1000}

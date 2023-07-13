@@ -67,20 +67,10 @@ export default function Work({ params }) {
         {data?.bottomImages && (
           <>
             <div>
-              <Image
-                priority
-                src={data.bottomImages[0]}
-                width={500}
-                height={400}
-              />
+              <Image src={data.bottomImages[0]} width={500} height={400} />
             </div>
             <div>
-              <Image
-                priority
-                src={data.bottomImages[1]}
-                width={500}
-                height={400}
-              />
+              <Image src={data.bottomImages[1]} width={500} height={400} />
             </div>
           </>
         )}
