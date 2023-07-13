@@ -9,12 +9,7 @@ export default function About() {
     <main className={styles.about}>
       <section className={styles.about__column} grid-col="1">
         <div className={styles.about__headshot}>
-          <Image
-            priority
-            src="/assets/cristhiantilleria.jpg"
-            height={320}
-            width={320}
-          />
+          <Image src="/assets/cristhiantilleria.jpg" height={320} width={320} />
         </div>
         <div className={styles.about__socials}>
           <Link href="mailto:cristhiantilleria@gmail.com">
