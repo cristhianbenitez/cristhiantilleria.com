@@ -2,6 +2,7 @@ import React from 'react';
 import styles from './about.module.css';
 import Image from 'next/image';
 import { BsArrowRight } from 'react-icons/bs';
+import Link from 'next/link';
 
 export default function About() {
   return (
@@ -16,18 +17,18 @@ export default function About() {
           />
         </div>
         <div className={styles.about__socials}>
-          <a href="mailto:cristhiantilleria@gmail.com">
+          <Link href="mailto:cristhiantilleria@gmail.com">
             <BsArrowRight />
             &nbsp; Email
-          </a>
-          <a href="https://www.instagram.com/cristhiantilleria25">
+          </Link>
+          <Link href="https://www.instagram.com/cristhiantilleria25">
             <BsArrowRight />
             &nbsp; Instagram
-          </a>
-          <a href="https://www.linkedin.com/in/cristhianbenitez/">
+          </Link>
+          <Link href="https://www.linkedin.com/in/cristhianbenitez/">
             <BsArrowRight />
             &nbsp; LinkedIn
-          </a>
+          </Link>
         </div>
       </section>
       <section className={styles.about__column} grid-col="2">

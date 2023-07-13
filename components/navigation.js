@@ -2,14 +2,13 @@
 import React from 'react';
 import Link from 'next/link';
 import styles from './navigation.module.css';
-import { motion } from 'framer-motion';
 
 export default function Navigation() {
   return (
     <nav className={styles.nav}>
       <div className={styles.nav__item}>
         <Link href="/">
-          <h1>Cristhian Tilleria</h1>
+          <h1 role="link">Cristhian Tilleria</h1>
         </Link>
         <div className={styles.nav__item_socials}>
           <Link
