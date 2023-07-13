@@ -11,7 +11,7 @@ const inter = Inter({ subsets: ['latin'] });
 export const metadata = {
   title: 'Cristhian Tilleria - Freelance Graphic Designer',
   description:
-    'Freelance Graphic Designer based in New York, specializing in brand identities, web design, app design and print design. With a passion for creative solutions and a keen eye for detail',
+    'Cristhian Tilleria is a freelance graphic designer based in NYC working in brand-identity, typography, digital and print design',
   keywords: [
     'graphic design',
     'design',
