@@ -1,6 +1,7 @@
 import Navigation from '@/components/navigation';
 import styles from './layout.module.css';
 import './global.css';
+import { Analytics } from '@vercel/analytics/react';
 
 import { Inter } from 'next/font/google';
 
@@ -25,6 +26,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
+      <Analytics />
       <body className={`${inter.className} ${styles.container}`}>
         <Navigation />
         {children}
