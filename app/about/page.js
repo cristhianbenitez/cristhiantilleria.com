@@ -41,7 +41,7 @@ export default function About() {
           crafting brand identities, websites and print designs, eagerly
           embracing any other opportunities that come his way.
         </h2>
-        <div className={styles.about__services}>
+        {/* <div className={styles.about__services}>
           <h3 className={styles.about__services__title}>Services:</h3>
           <ul>
             <li>Brand Identity</li>
@@ -51,7 +51,7 @@ export default function About() {
             <li>Web Design</li>
             <li>Front-End Web Development</li>
           </ul>
-        </div>
+        </div> */}
       </section>
     </main>
   );

@@ -1,0 +1,39 @@
+.box__thumbnail {
+  object-fit: cover;
+  block-size: auto;
+  aspect-ratio: 2/1;
+}
+
+.box {
+  height: 100%;
+  width: 100%;
+}
+
+.box__link {
+  text-decoration: none;
+  color: black;
+}
+
+.box__title {
+  margin-top: 0.25rem;
+}
+
+.box:hover .box__title {
+  opacity: 50%;
+}
+
+.box__bottomText {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+.box__thumbnail__container {
+  overflow: hidden;
+}
+
+@media (min-width: 764px) {
+  .box__thumbnail {
+    aspect-ratio: 1/1;
+    max-height: 480px;
+  }
+}

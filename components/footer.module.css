@@ -6,7 +6,7 @@
 }
 
 .footer__item {
-  font-size: 2.15rem;
+  font-size: 2.1rem;
   font-weight: 400;
   align-self: end;
   letter-spacing: -0.25px;
@@ -19,7 +19,7 @@
 
 @media (min-width: 500px) {
   .footer__item {
-    font-size: 2.875rem;
+    font-size: 1.5rem;
   }
 }
 
@@ -33,7 +33,7 @@
   .footer__item {
     align-self: center;
     font-size: 2.75rem;
-    padding-top: 1.5rem;
-    padding-bottom: 1.5rem;
+    /* padding-top: 1.5rem; */
+    /* padding-bottom: 1.5rem; */
   }
 }

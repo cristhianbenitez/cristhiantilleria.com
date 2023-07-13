@@ -6,6 +6,7 @@ import { BsChevronRight, BsChevronLeft } from 'react-icons/bs';
 
 import { Carousel } from 'react-responsive-carousel';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
+import Image from 'next/image';
 
 export default function Slider(props) {
   return (
@@ -21,7 +22,7 @@ export default function Slider(props) {
         >
           {props.images.map((URL, index) => (
             <div className={styles.carousel__item}>
-              <img alt="sample_file" src={URL} key={index} />
+              <Image alt="sample_file" src={URL} key={URL} fill priority />
             </div>
           ))}
         </Carousel>

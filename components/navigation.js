@@ -1,6 +1,8 @@
+'use client';
 import React from 'react';
 import Link from 'next/link';
 import styles from './navigation.module.css';
+import { motion } from 'framer-motion';
 
 export default function Navigation() {
   return (

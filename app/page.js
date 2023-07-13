@@ -1,10 +1,10 @@
-import Link from 'next/link';
 import styles from './page.module.css';
-import Image from 'next/image';
 
 import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
+import Footer from '@/components/footer';
+import Box from '@/components/box';
 
 export default function Home() {
   const projectDir = 'projects';
@@ -23,34 +23,13 @@ export default function Home() {
   });
 
   return (
-    <main className={styles.work}>
-      {projects.map((project) => (
-        <div className={styles.work__item}>
-          <Link
-            href={`/projects/${project.slug}`}
-            className={styles.work__item__link}
-            passHref
-            key={project.slug}
-          >
-            <Image
-              priority
-              src={project.meta.thumbnail}
-              alt={project.meta?.thumbnailAlt && project.meta.thumbnailAlt}
-              height={1000}
-              width={1000}
-              className={styles.work__item__thumbnail}
-            />
-            <div className={styles.work_item_bottomText}>
-              <span className={styles.work_item_title}>
-                {project.meta.title}
-              </span>
-              <span className={styles.work_item_title}>
-                {project.meta.type}
-              </span>
-            </div>
-          </Link>
-        </div>
-      ))}
-    </main>
+    <>
+      <main className={styles.work}>
+        {projects.map((project) => (
+          <Box project={project} />
+        ))}
+      </main>
+      <Footer />
+    </>
   );
 }
