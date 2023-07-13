@@ -13,13 +13,14 @@ export const metadata = {
   description:
     'Cristhian Tilleria is a freelance graphic-designer based in NYC working in brand-identity, typography, digital and print design',
   keywords: [
-    'graphic design',
+    'graphic-design',
     'design',
-    'new york graphic designer',
-    'freelance graphic designer',
+    'new york graphic-designer',
+    'freelance graphic-designer',
     'brand identity',
     'web design',
-    'print design'
+    'print design',
+    'nyc designer'
   ]
 };
 
