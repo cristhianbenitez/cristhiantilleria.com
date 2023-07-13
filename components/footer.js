@@ -7,7 +7,7 @@ export default function Footer() {
     <footer className={styles.footer}>
       <span className={styles.footer__item}>
         <Link href={'mailto:cristhiantilleria@gmail.com'}>
-          cristhiantilleria@gmail.com
+          Contact
         </Link>
       </span>
     </footer>
