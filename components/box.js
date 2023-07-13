@@ -1,5 +1,3 @@
-'use client';
-
 import React, { forwardRef } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
