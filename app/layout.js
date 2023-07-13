@@ -15,12 +15,12 @@ export const metadata = {
   keywords: [
     'graphic-design',
     'design',
-    'new york graphic-designer',
+    'new-york graphic-designer',
     'freelance graphic-designer',
-    'brand identity',
-    'web design',
-    'print design',
-    'nyc designer'
+    'brand-identity',
+    'digital-design',
+    'print-design',
+    'nyc-designer'
   ]
 };
 
