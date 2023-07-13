@@ -1,19 +1,13 @@
 import React from 'react';
 import Image from 'next/image';
-
-import Slider from '@/components/slider';
-
-import { BsArrowRight } from 'react-icons/bs';
-
-import styles from './work.module.css';
-
 import Link from 'next/link';
-
 import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
+import { BsArrowRight } from 'react-icons/bs';
 
-import { MDXRemote } from 'next-mdx-remote/rsc';
+import Slider from '@/components/slider';
+import styles from './work.module.css';
 
 export async function generateStaticParams() {
   const projectDir = 'projects';
@@ -48,8 +42,8 @@ export default function Work({ params }) {
     <div>
       <section className={styles.projectInformation}>
         <div className={styles.projectInformation_services}>
-          {data.services.map((service) => (
-            <span>{service}</span>
+          {data.services.map((service, i) => (
+            <span key={service}>{service}</span>
           ))}
         </div>
 
@@ -67,10 +61,20 @@ export default function Work({ params }) {
         {data?.bottomImages && (
           <>
             <div>
-              <Image src={data.bottomImages[0]} width={500} height={400} />
+              <Image
+                src={data.bottomImages[0]}
+                width={500}
+                height={400}
+                alt="image of design project"
+              />
             </div>
             <div>
-              <Image src={data.bottomImages[1]} width={500} height={400} />
+              <Image
+                src={data.bottomImages[1]}
+                width={500}
+                height={400}
+                alt="image of design project"
+              />
             </div>
           </>
         )}

@@ -1,15 +1,15 @@
-import Navigation from '@/components/navigation';
-import styles from './layout.module.css';
-import './global.css';
 import { Analytics } from '@vercel/analytics/react';
+import styles from './layout.module.css';
+import Navigation from '@/components/navigation';
 
 import { Inter } from 'next/font/google';
 
-// If loading a variable font, you don't need to specify the font weight
+import './global.css';
+
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata = {
-  title: 'Cristhian Benitez - Freelance Graphic Designer',
+  title: 'Cristhian Tilleria - Freelance Graphic Designer',
   description:
     'Freelance Graphic Designer based in New York, specializing in brand identities, web design, app design and print design. With a passion for creative solutions and a keen eye for detail',
   keywords: [

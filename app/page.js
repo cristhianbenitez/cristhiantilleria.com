@@ -1,8 +1,8 @@
-import styles from './page.module.css';
-
 import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
+
+import styles from './page.module.css';
 import Footer from '@/components/footer';
 import Box from '@/components/box';
 
@@ -25,8 +25,8 @@ export default function Home() {
   return (
     <>
       <main className={styles.work}>
-        {projects.map((project) => (
-          <Box project={project} />
+        {projects.map((project, i) => (
+          <Box key={project.slug} project={project} />
         ))}
       </main>
       <Footer />

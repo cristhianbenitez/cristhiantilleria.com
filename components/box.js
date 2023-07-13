@@ -8,12 +8,7 @@ import styles from './box.module.css';
 export default function Box({ project }) {
   return (
     <div className={styles.box}>
-      <Link
-        href={`/projects/${project.slug}`}
-        className={styles.box__link}
-        passHref
-        key={project.slug}
-      >
+      <Link href={`/projects/${project.slug}`} className={styles.box__link}>
         <div className={styles.box__thumbnail__container}>
           <Image
             src={project.meta.thumbnail}
