@@ -30,24 +30,30 @@ const Row = ({ leftImage, rightImage, fullImage }) => {
     </div>
   ) : (
     <div className={styles.row}>
-      {leftImage && (
-        <Image
-          src={leftImage}
-          width={600}
-          height={600}
-          ref={ref}
-          style={imageStyle}
-        />
-      )}
-      {rightImage && (
-        <Image
-          src={rightImage}
-          width={600}
-          height={600}
-          ref={ref}
-          style={imageStyle}
-        />
-      )}
+      <div>
+        {leftImage && (
+          <Image
+            src={leftImage}
+            width={600}
+            height={600}
+            ref={ref}
+            style={imageStyle}
+            grid-col="1"
+          />
+        )}
+      </div>
+      <div>
+        {rightImage && (
+          <Image
+            src={rightImage}
+            width={600}
+            height={600}
+            ref={ref}
+            style={imageStyle}
+            grid-col="2"
+          />
+        )}
+      </div>
     </div>
   );
 };
