@@ -1,13 +1,14 @@
 .box__thumbnail {
   object-fit: cover;
-  block-size: auto;
+  height: 100%;
+  width: 100%;
   aspect-ratio: 2/1;
 }
 
 .box {
-  height: 100%;
-  width: 100%;
   position: relative;
+  overflow: hidden;
+  object-fit: cover;
 }
 
 .box__link {
@@ -36,13 +37,11 @@
 .box:hover .box__bottomText {
   background: rgba(0, 0, 0, 0.8);
 }
-.box__thumbnail__container {
-  overflow: hidden;
-}
 
-@media (min-width: 764px) {
+@media (min-width: 768px) {
   .box__thumbnail {
-    aspect-ratio: 1/1;
-    max-height: 480px;
+    min-height: 300px;
+    aspect-ratio: 5/3;
+    max-height: 600px;
   }
 }
