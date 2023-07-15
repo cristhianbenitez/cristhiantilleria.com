@@ -8,6 +8,7 @@ import { BsArrowRight } from 'react-icons/bs';
 
 import Slider from '@/components/slider';
 import styles from './work.module.css';
+import PageWrapper from '@/components/pagewrapper';
 
 export async function generateStaticParams() {
   const projectDir = 'projects';
@@ -39,7 +40,7 @@ export default function Work({ params }) {
   const { data } = getProject(params);
 
   return (
-    <div>
+    <PageWrapper>
       <section className={styles.projectInformation}>
         <div className={styles.projectInformation_services}>
           {data.services.map((service, i) => (
@@ -90,6 +91,6 @@ export default function Work({ params }) {
           </Link>
         </span>
       </section>
-    </div>
+    </PageWrapper>
   );
 }

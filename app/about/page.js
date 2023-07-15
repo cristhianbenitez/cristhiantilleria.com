@@ -3,10 +3,11 @@ import styles from './about.module.css';
 import Image from 'next/image';
 import { BsArrowRight } from 'react-icons/bs';
 import Link from 'next/link';
+import PageWrapper from '@/components/pagewrapper';
 
 export default function About() {
   return (
-    <main className={styles.about}>
+    <PageWrapper className={styles.about}>
       <section className={styles.about__column} grid-col="1">
         <div className={styles.about__headshot}>
           <Image src="/assets/cristhiantilleria.jpg" height={320} width={320} />
@@ -49,6 +50,6 @@ export default function About() {
           </ul>
         </div> */}
       </section>
-    </main>
+    </PageWrapper>
   );
 }

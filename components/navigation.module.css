@@ -32,9 +32,7 @@
   font-size: 1.5rem;
 }
 .nav__item > a:hover,
-.nav__item > a:focus,
-.nav__item_socials > a:hover,
-.nav__item_socials > a:focus {
+.nav__item_socials > a:hover {
   opacity: 50%;
 }
 

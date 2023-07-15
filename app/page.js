@@ -5,6 +5,7 @@ import matter from 'gray-matter';
 import styles from './page.module.css';
 import Footer from '@/components/footer';
 import Box from '@/components/box';
+import PageWrapper from '@/components/pagewrapper';
 
 export default function Home() {
   const projectDir = 'projects';
@@ -23,7 +24,7 @@ export default function Home() {
   });
 
   return (
-    <>
+    <PageWrapper>
       <main className={styles.work}>
         <h2 className={styles.headline}>Freelance Graphic Designer</h2>
         {projects.map((project, i) => (
@@ -31,6 +32,6 @@ export default function Home() {
         ))}
       </main>
       <Footer />
-    </>
+    </PageWrapper>
   );
 }

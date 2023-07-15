@@ -1,7 +1,15 @@
-import React, { forwardRef } from 'react';
+'use client';
+
+import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import styles from './box.module.css';
+import { motion } from 'framer-motion';
+
+const spanVariant = {
+  hidden: { opacity: 0, y: 10 },
+  hover: { opacity: 1, y: 0, transition: { duration: 0.5 } }
+};
 
 export default function Box({ project }) {
   return (
@@ -16,10 +24,21 @@ export default function Box({ project }) {
             className={styles.box__thumbnail}
           />
         </div>
-        <div className={styles.box__bottomText}>
-          <span className={styles.box__title}>{project.meta.title}</span>
-          <span className={styles.box__title}>{project.meta.type}</span>
-        </div>
+        <motion.div
+          initial="hidden"
+          animate="initial"
+          whileHover="hover"
+          className={styles.box__bottomText}
+        >
+          <motion.span variants={spanVariant} className={styles.box__title}>
+            {project.meta.title}
+          </motion.span>
+          <motion.span variants={spanVariant} className={styles.box__title}>
+            {project.meta.type}
+          </motion.span>
+
+          {/* <span className={styles.box__title}>{project.meta.type}</span> */}
+        </motion.div>
       </Link>
     </div>
   );

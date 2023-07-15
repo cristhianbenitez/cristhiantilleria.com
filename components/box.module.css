@@ -7,6 +7,7 @@
 .box {
   height: 100%;
   width: 100%;
+  position: relative;
 }
 
 .box__link {
@@ -16,16 +17,24 @@
 
 .box__title {
   margin-top: 0.25rem;
-}
-
-.box:hover .box__title {
-  opacity: 50%;
+  overflow: hidden;
+  display: block;
+  position: relative;
 }
 
 .box__bottomText {
-  display: flex;
-  justify-content: space-between;
   width: 100%;
+  color: white;
+  position: absolute;
+  inset-block: 0;
+  padding-left: 1rem;
+  padding-top: 1rem;
+  font-weight: 500;
+  font-size: 1.3rem;
+}
+
+.box:hover .box__bottomText {
+  background: rgba(0, 0, 0, 0.8);
 }
 .box__thumbnail__container {
   overflow: hidden;

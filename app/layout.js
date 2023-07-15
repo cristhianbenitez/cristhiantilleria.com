@@ -1,7 +1,6 @@
 import { Analytics } from '@vercel/analytics/react';
 import styles from './layout.module.css';
 import Navigation from '@/components/navigation';
-
 import { Inter } from 'next/font/google';
 
 import './global.css';
@@ -29,19 +28,8 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <Analytics />
       <body className={`${inter.className} ${styles.container}`}>
-        {/* <Navigation />
-        {children} */}
-        <div
-          style={{
-            height: '100vh',
-            width: '100%',
-            display: 'flex',
-            justifyContent: 'center',
-            alignItems: 'center'
-          }}
-        >
-          Work in Progress
-        </div>
+        <Navigation />
+        {children}
       </body>
     </html>
   );
