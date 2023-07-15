@@ -30,10 +30,18 @@ export default function Box({ project }) {
           whileHover="hover"
           className={styles.box__bottomText}
         >
-          <motion.span variants={spanVariant} className={styles.box__title}>
+          <motion.span
+            variants={spanVariant}
+            layoutId="underline"
+            className={styles.box__title}
+          >
             {project.meta.title}
           </motion.span>
-          <motion.span variants={spanVariant} className={styles.box__title}>
+          <motion.span
+            variants={spanVariant}
+            layoutId="underline"
+            className={styles.box__title}
+          >
             {project.meta.type}
           </motion.span>
 

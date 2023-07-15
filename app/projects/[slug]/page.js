@@ -41,6 +41,9 @@ export default function Work({ params }) {
 
   return (
     <PageWrapper>
+      <section className={styles.carousel}>
+        {data.images && <Slider images={data.images} />}
+      </section>
       <section className={styles.projectInformation}>
         <div className={styles.projectInformation_services}>
           {data.services.map((service, i) => (
@@ -52,10 +55,6 @@ export default function Work({ params }) {
           <h3>{data.title}</h3>
           <p>{data.description}</p>
         </div>
-      </section>
-
-      <section className={styles.carousel}>
-        {data.images && <Slider images={data.images} />}
       </section>
 
       <section className={styles.bottomImages}>
