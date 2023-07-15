@@ -1,14 +1,15 @@
 import React from 'react';
-import Image from 'next/image';
 import Link from 'next/link';
 import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
+import { MDXRemote } from 'next-mdx-remote/rsc';
 import { BsArrowRight } from 'react-icons/bs';
 
 import Slider from '@/components/slider';
-import styles from './work.module.css';
 import PageWrapper from '@/components/pagewrapper';
+import Row from '@/components/row';
+import styles from './work.module.css';
 
 export async function generateStaticParams() {
   const projectDir = 'projects';
@@ -37,16 +38,17 @@ function getProject({ slug }) {
 }
 
 export default function Work({ params }) {
-  const { data } = getProject(params);
+  const { data, content } = getProject(params);
 
   return (
     <PageWrapper>
       <section className={styles.carousel}>
         {data.images && <Slider images={data.images} />}
       </section>
+
       <section className={styles.projectInformation}>
         <div className={styles.projectInformation_services}>
-          {data.services.map((service, i) => (
+          {data.services?.map((service, i) => (
             <span key={service}>{service}</span>
           ))}
         </div>
@@ -57,27 +59,11 @@ export default function Work({ params }) {
         </div>
       </section>
 
-      <section className={styles.bottomImages}>
-        {data?.bottomImages && (
-          <>
-            <div>
-              <Image
-                src={data.bottomImages[0]}
-                width={500}
-                height={400}
-                alt="image of design project"
-              />
-            </div>
-            <div>
-              <Image
-                src={data.bottomImages[1]}
-                width={500}
-                height={400}
-                alt="image of design project"
-              />
-            </div>
-          </>
-        )}
+      <section className={styles.content}>
+        <MDXRemote source={content} components={{ Row }} />
+      </section>
+
+      <section className={styles.bottomNavigation}>
         <span className={styles.bottomNavigationBtn}>
           <Link href="/" rel="home_page">
             Index

@@ -2,6 +2,7 @@ import { Analytics } from '@vercel/analytics/react';
 import styles from './layout.module.css';
 import Navigation from '@/components/navigation';
 import { Inter } from 'next/font/google';
+import SmoothScroll from '@/components/smoothscroll';
 
 import './global.css';
 
@@ -27,10 +28,12 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <Analytics />
-      <body className={`${inter.className} ${styles.container}`}>
-        <Navigation />
-        {children}
-      </body>
+      <SmoothScroll>
+        <body className={`${inter.className} ${styles.container}`}>
+          <Navigation />
+          {children}
+        </body>
+      </SmoothScroll>
     </html>
   );
 }
