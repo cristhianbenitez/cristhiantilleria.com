@@ -28,12 +28,10 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <Analytics />
-      <SmoothScroll>
-        <body className={`${inter.className} ${styles.container}`}>
-          <Navigation />
-          {children}
-        </body>
-      </SmoothScroll>
+      <body className={`${inter.className} ${styles.container}`}>
+        <Navigation />
+        {children}
+      </body>
     </html>
   );
 }

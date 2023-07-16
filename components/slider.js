@@ -16,7 +16,11 @@ export default function Slider(props) {
         useKeyboardArrows={true}
         infiniteLoop={true}
         autoPlay={true}
-        interval={2000}
+        interval={3000}
+        verticalSwipe="natural"
+        showIndicators={false}
+        stopOnHover={true}
+        transitionTime={1000}
       >
         {props.images.map((URL) => (
           <div className={styles.carousel__item} key={URL}>
