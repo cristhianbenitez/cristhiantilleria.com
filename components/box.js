@@ -18,8 +18,8 @@ export default function Box({ project }) {
         <Image
           src={project.meta.thumbnail}
           alt={project.meta?.thumbnailAlt && project.meta.thumbnailAlt}
-          height={1000}
-          width={1000}
+          height={9999}
+          width={9999}
           className={styles.box__thumbnail}
         />
         <motion.div

@@ -17,7 +17,7 @@
   object-fit: cover;
   height: 100%;
   width: 100%;
-  aspect-ratio: 1/1;
+  aspect-ratio: auto 3001 / 1876;
 }
 
 @media (min-width: 764px) {
@@ -30,12 +30,7 @@
   }
 
   .row img {
-    aspect-ratio: 1/1;
     max-height: 600px;
-  }
-  .fullRow img {
-    aspect-ratio: 1/1;
-    max-height: 800px;
   }
 
   .fullRow {

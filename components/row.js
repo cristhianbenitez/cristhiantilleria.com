@@ -23,8 +23,8 @@ const Row = ({ leftImage, rightImage, fullImage }) => {
       <Image
         ref={ref}
         src={fullImage}
-        width={600}
-        height={600}
+        width={9999}
+        height={9999}
         style={imageStyle}
       />
     </div>
@@ -34,8 +34,8 @@ const Row = ({ leftImage, rightImage, fullImage }) => {
         {leftImage && (
           <Image
             src={leftImage}
-            width={600}
-            height={600}
+            width={9999}
+            height={9999}
             ref={ref}
             style={imageStyle}
             grid-col="1"
@@ -46,8 +46,8 @@ const Row = ({ leftImage, rightImage, fullImage }) => {
         {rightImage && (
           <Image
             src={rightImage}
-            width={600}
-            height={600}
+            width={9999}
+            height={9999}
             ref={ref}
             style={imageStyle}
             grid-col="2"
