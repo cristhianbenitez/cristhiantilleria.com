@@ -54,10 +54,10 @@ export default function Work({ params }) {
           <p>{data.description}</p>
         </div>
       </section>
-
+      {/*
       <section className={styles.carousel}>
         {data.images && <Slider images={data.images} />}
-      </section>
+      </section> */}
 
       <section className={styles.content}>
         <MDXRemote source={content} components={{ Row }} />
