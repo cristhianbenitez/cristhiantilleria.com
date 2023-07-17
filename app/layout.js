@@ -2,7 +2,6 @@ import { Analytics } from '@vercel/analytics/react';
 import styles from './layout.module.css';
 import Navigation from '@/components/navigation';
 import { Inter } from 'next/font/google';
-import SmoothScroll from '@/components/smoothscroll';
 
 import './global.css';
 

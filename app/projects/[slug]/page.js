@@ -71,7 +71,7 @@ export default function Work({ params }) {
         </span>
 
         <span className={styles.bottomNavigationBtn}>
-          <Link href={`projects/${data.nextPage}`} rel="next_page">
+          <Link href={`/projects/${data.nextPage}`} rel="next_page">
             Next <BsArrowRight />
           </Link>
         </span>
