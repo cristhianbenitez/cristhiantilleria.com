@@ -4,9 +4,7 @@ import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
 import { MDXRemote } from 'next-mdx-remote/rsc';
-import { BsArrowRight } from 'react-icons/bs';
 
-import Slider from '@/components/slider';
 import PageWrapper from '@/components/pagewrapper';
 import Row from '@/components/row';
 import styles from './work.module.css';
@@ -54,10 +52,6 @@ export default function Work({ params }) {
           <p>{data.description}</p>
         </div>
       </section>
-      {/*
-      <section className={styles.carousel}>
-        {data.images && <Slider images={data.images} />}
-      </section> */}
 
       <section className={styles.content}>
         <MDXRemote source={content} components={{ Row }} />
