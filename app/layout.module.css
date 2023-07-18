@@ -10,8 +10,3 @@
     padding-inline: 2.5rem;
   }
 }
-
-@media (min-width: 1460px) {
-  .container {
-  }
-}
