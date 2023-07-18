@@ -104,3 +104,18 @@ h1 {
     font-size: 2.75rem;
   }
 }
+
+
+
+.container {
+  max-width: 100rem;
+  margin-inline: auto;
+  padding-inline: 1rem;
+  margin-bottom: 15px;
+}
+
+@media (min-width: 764px) {
+  .container {
+    padding-inline: 2.5rem;
+  }
+}

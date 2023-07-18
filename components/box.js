@@ -21,6 +21,7 @@ export default function Box({ project }) {
           height={9999}
           width={9999}
           className={styles.box__thumbnail}
+          priority
         />
         <motion.div
           initial="hidden"
