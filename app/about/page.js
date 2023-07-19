@@ -36,7 +36,7 @@ export default function About() {
           his immersion in the design world unveiled a deep fascination for art
           and design. Motivated by a strong work ethic, Cristhian wholeheartedly
           dedicates himself to crafting brand identities, websites, and print
-          designs, eagerly embracing any other opportunities that come his way.
+          designs. Excited to contribute meaningfully to projects that help people.
         </h2>
         {/* <div className={styles.about__services}>
           <h3 className={styles.about__services__title}>Services:</h3>
