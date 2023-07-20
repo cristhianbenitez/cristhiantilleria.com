@@ -19,9 +19,6 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }) {
-  console.log(
-    "===================== It ain't much, but is honest work Developed by Cristhian Tilleria ====================="
-  );
   return (
     <html lang="en">
       <Analytics />
