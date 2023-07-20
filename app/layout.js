@@ -1,7 +1,10 @@
 import { Analytics } from '@vercel/analytics/react';
 import Navigation from '@/components/navigation';
+import { Inter } from 'next/font/google';
+
 import './global.css';
 
+const inter = Inter({ subsets: ['latin'] });
 export const metadata = {
   title: 'Cristhian Tilleria - Freelance Graphic Designer',
   description:
@@ -22,7 +25,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <Analytics />
-      <body className={`container`}>
+      <body className={`container ${inter.className}`}>
         <Navigation />
         {children}
       </body>
