@@ -13,15 +13,21 @@ export default function About() {
           <Image src="/assets/cristhiantilleria.jpg" height={320} width={320} />
         </div>
         <div className={styles.about__socials}>
-          <Link href="mailto:cristhiantilleria@gmail.com">
+          <Link target="blank" href="mailto:cristhiantilleria@gmail.com">
             <BsArrowRight />
             &nbsp; Email
           </Link>
-          <Link href="https://www.instagram.com/cristhiantilleria25">
+          <Link
+            target="blank"
+            href="https://www.instagram.com/cristhiantilleria25"
+          >
             <BsArrowRight />
             &nbsp; Instagram
           </Link>
-          <Link href="https://www.linkedin.com/in/cristhianbenitez/">
+          <Link
+            target="blank"
+            href="https://www.linkedin.com/in/cristhianbenitez/"
+          >
             <BsArrowRight />
             &nbsp; LinkedIn
           </Link>
