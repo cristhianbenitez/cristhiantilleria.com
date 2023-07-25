@@ -35,15 +35,15 @@ export default function About() {
       </section>
       <section className={styles.about__column} grid-col="2">
         <h2 className={styles.about__headline}>
-          I am a New York-based Freelance Graphic Designer with a newfound
-          passion for design and a strong interest in communication. I am always
-          seeking to improve as a person and acquire more knowledge to better
-          understand life, despite all its challenges. My immersion in the
-          design world has unveiled a fascination for art and design. It has
-          also helped me see the struggles that we face as humans and how, as a
-          designer, I can make a small contribution to a more connected world.
-          Motivated by a strong work ethic, I wholeheartedly dedicate myself to
-          my craft.
+          I'm a freelance graphic designer based in New York, and I've developed
+          a newfound passion for design and a deep interest in communication.
+          I'm constantly seeking personal growth and knowledge to better
+          understand life, despite its challenges. Immersing myself in the
+          design world has revealed a fascination for art and design while also
+          making me more aware of the struggles we face as humans. As a
+          designer, I believe I can make a small contribution with my work. My
+          dedication to my craft is driven by a strong work ethic and a
+          wholehearted commitment to delivering meaningful designs.
         </h2>
         {/* <div className={styles.about__services}>
           <h3 className={styles.about__services__title}>Services:</h3>
