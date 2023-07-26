@@ -23,11 +23,15 @@ export default function Home() {
     };
   });
 
+  const sortedProjects = projects.sort((a, b) => {
+    return a.meta.order - b.meta.order;
+  });
+
   return (
     <PageWrapper>
       <main className={styles.work}>
         <h2 className={styles.headline}>Freelance Graphic Designer</h2>
-        {projects.map((project, i) => (
+        {sortedProjects.map((project, i) => (
           <Box key={project.slug} project={project} />
         ))}
       </main>

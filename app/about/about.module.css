@@ -33,6 +33,10 @@
   font-size: 1.25rem;
 }
 
+.about__socials > a:hover {
+  opacity: 50%;
+}
+
 .about__headline {
   font-weight: 500;
   line-height: 1.25;

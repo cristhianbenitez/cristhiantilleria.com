@@ -15,14 +15,16 @@ export default function Box({ project }) {
   return (
     <div className={styles.box}>
       <Link href={`/projects/${project.slug}`} className={styles.box__link}>
-        <Image
-          src={project.meta.thumbnail}
-          alt={project.meta?.thumbnailAlt && project.meta.thumbnailAlt}
-          height={9999}
-          width={9999}
-          className={styles.box__thumbnail}
-          priority
-        />
+        <div className={styles.box__thumbnail_container}>
+          <Image
+            src={project.meta.thumbnail}
+            alt={project.meta?.thumbnailAlt && project.meta.thumbnailAlt}
+            height={9999}
+            width={9999}
+            className={styles.box__thumbnail}
+            priority
+          />
+        </div>
         <motion.div
           initial="hidden"
           animate="initial"

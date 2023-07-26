@@ -2,6 +2,10 @@
   object-fit: cover;
   height: 100%;
   width: 100%;
+}
+.box__thumbnail_container {
+  position: relative;
+  overflow: hidden;
   aspect-ratio: auto 3001 / 1876;
 }
 
