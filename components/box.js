@@ -38,13 +38,13 @@ export default function Box({ project }) {
           <Image
             src={project.meta.thumbnail}
             alt={project.meta?.thumbnailAlt && project.meta.thumbnailAlt}
-            height={9999}
-            width={9999}
+            fill
             className={styles.box__thumbnail}
             placeholder="blur"
             blurDataURL={`data:image/svg+xml;base64,${toBase64(
               shimmer(700, 475)
             )}`}
+            priority
           />
         </div>
         <motion.div
