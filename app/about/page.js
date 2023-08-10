@@ -35,15 +35,16 @@ export default function About() {
       </section>
       <section className={styles.about__column} grid-col="2">
         <h2 className={styles.about__headline}>
-          I'm a freelance graphic designer based in New York, and I've developed
-          a newfound passion for design and a deep interest in communication.
-          I'm constantly seeking personal growth and knowledge to better
-          understand life, despite its challenges. Immersing myself in the
-          design world has revealed a fascination for art and design while also
-          making me more aware of the struggles we face as humans. As a
-          designer, I believe I can make a small contribution with my work. My
-          dedication to my craft is driven by a strong work ethic and a
-          wholehearted commitment to delivering meaningful designs.
+          Cristhian is a skilled Freelance Graphic Designer based in New York,
+          specializing in creating impactful branding and immersive experiences
+          through strategic design. With a strong commitment to producing
+          thoughtful results, I collaborate effectively with ambitious
+          businesses aiming to communicate their purpose with authenticity and
+          meaning. <br />
+        </h2>
+        <h2 className={styles.about__headline}>
+          On my time off you can find me immersed in type books, enjoying music,
+          learning to speak Japanese or capturing moments through photography.
         </h2>
         {/* <div className={styles.about__services}>
           <h3 className={styles.about__services__title}>Services:</h3>
