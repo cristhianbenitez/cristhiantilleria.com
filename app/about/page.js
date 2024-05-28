@@ -35,16 +35,17 @@ export default function About() {
       </section>
       <section className={styles.about__column} grid-col="2">
         <h2 className={styles.about__headline}>
-          Cristhian is a skilled Freelance Graphic Designer based in New York,
-          specializing in creating impactful branding and immersive experiences
-          through strategic design. With a strong commitment to producing
-          thoughtful results, I collaborate effectively with ambitious
-          businesses aiming to communicate their purpose with authenticity and
-          meaning. <br />
+          Howdy! I'm Cristhian a Front End Developer & Graphic Designer based in
+          New York, interested in creating impactful web application, brands and
+          digital experiences through strategic design & web development. With a
+          strong commitment to producing thoughtful results, I collaborate
+          effectively with ambitious businesses aiming to communicate their
+          purpose with authenticity and meaning. <br />
         </h2>
         <h2 className={styles.about__headline}>
-          On my time off you can find me immersed in type books, enjoying music,
-          learning to speak Japanese or capturing moments through photography.
+          On my time off you can find me immersed in type books, coding new
+          projects, enjoying music, learning some new language on duolingo or
+          capturing moments through photography.
         </h2>
         {/* <div className={styles.about__services}>
           <h3 className={styles.about__services__title}>Services:</h3>
@@ -60,15 +61,4 @@ export default function About() {
       </section>
     </PageWrapper>
   );
-}
-
-{
-  /* Cristhian, a Freelance Graphic Designer based in New York, who has
-developed a strong passion for design. With an insatiable thirst for
-knowledge, he constantly seeks improvement. Previous to his design
-education, he believed creativity was exclusive to a select few, but
-his immersion in the design world unveiled a deep fascination for art
-and design. Motivated by a strong work ethic, Cristhian wholeheartedly
-dedicates himself to crafting brand identities, websites, and print
-designs. Excited to contribute meaningfully to projects that help people. */
 }
