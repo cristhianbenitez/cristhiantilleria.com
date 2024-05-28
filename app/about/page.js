@@ -17,6 +17,10 @@ export default function About() {
             <BsArrowRight />
             &nbsp; Email
           </Link>
+          <Link target="blank" href="https://github.com/cristhianbenitez">
+            <BsArrowRight />
+            &nbsp; Github
+          </Link>
           <Link
             target="blank"
             href="https://www.instagram.com/cristhiantilleria25"
