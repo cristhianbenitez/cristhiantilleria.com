@@ -6,17 +6,16 @@ import './global.css';
 
 const inter = Inter({ subsets: ['latin'] });
 export const metadata = {
-  title: 'Cristhian Tilleria - Freelance Graphic Designer',
+  title: 'Cristhian Tilleria - Frontend Developer & Designer',
   description:
-    'Cristhian Tilleria is a New York based Freelance Graphic Designer working in brand-identity, typography, digital and print design',
+    'Cristhian Tilleria is a New York based Front End Develope & Designer working in brand-identity, ui/ux design and web development',
   keywords: [
-    'graphic-design',
     'design',
-    'ny graphic designer',
-    'freelance graphic designer',
+    'web development',
+    ' graphic designer',
     'brand-identity',
     'digital-design',
-    'print-design',
+    'front-end-development',
     'nyc-designer'
   ]
 };
