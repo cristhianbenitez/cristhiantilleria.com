@@ -11,7 +11,7 @@
 
 .projectInformation_row {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
   gap: 15px;
 }
 
@@ -31,7 +31,6 @@
 
 .projectInformation_title {
   padding-bottom: 1rem;
-  grid-area: 2/2;
 }
 
 .projectInformation_description p {
@@ -46,9 +45,9 @@
 
 .projectInformation_links a {
   text-decoration: none;
-  }
+}
 
-  .projectInformation_links a,
+.projectInformation_links a,
 .projectInformation_links a:visited {
   color: rgb(80, 80, 172);
 }
@@ -86,6 +85,14 @@
     grid-template-columns: 1fr 1fr;
     grid-template-rows: none;
     gap: 20px;
+  }
+
+  .projectInformation_row {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .projectInformation_title {
+    grid-area: 2/2;
   }
 }
 
