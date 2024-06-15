@@ -39,29 +39,24 @@ export default function About() {
       </section>
       <section className={styles.about__column} grid-col="2">
         <h2 className={styles.about__headline}>
-          Howdy! I'm Cristhian a Front End Developer & Graphic Designer based in
-          New York, interested in creating impactful web application, brands and
-          digital experiences through strategic design & web development. With a
-          strong commitment to producing thoughtful results, I collaborate
-          effectively with ambitious businesses aiming to communicate their
-          purpose with authenticity and meaning. <br />
+          Hey! I'm Cristhian, a New York based Freelance Front End Developer who
+          likes to Design. My interests lays in the intersection of design and
+          the web,. I love to think about brands and the value of design. With a
+          strong commitment to producing effective and useful work <br />
         </h2>
         <h2 className={styles.about__headline}>
           On my time off you can find me immersed in type books, coding new
           projects, enjoying music, learning some new language on duolingo or
           capturing moments through photography.
         </h2>
-        {/* <div className={styles.about__services}>
-          <h3 className={styles.about__services__title}>Services:</h3>
+        <div className={styles.about__services}>
           <ul>
+            <li>Full-Stack Web Development</li>
+            <li>UI/UX </li>
             <li>Brand Identity</li>
             <li>Logo Design</li>
-            <li>Print Design</li>
-            <li>App Design</li>
-            <li>Web Design</li>
-            <li>Front-End Web Development</li>
           </ul>
-        </div> */}
+        </div>
       </section>
     </PageWrapper>
   );

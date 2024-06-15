@@ -41,15 +41,30 @@ export default function Work({ params }) {
   return (
     <PageWrapper>
       <section className={styles.projectInformation}>
-        <div className={styles.projectInformation_services}>
-          {data.services?.map((service, i) => (
-            <span key={service}>{service}</span>
-          ))}
+        <div className={styles.projectInformation_row}>
+          <h3 className={styles.projectInformation_title}>{data.title}</h3>
         </div>
-
-        <div className={styles.projectInformation_description}>
-          <h3>{data.title}</h3>
-          <p>{data.description}</p>
+        <div className={styles.projectInformation_row}>
+          <div className={styles.projectInformation_leftSection}>
+            <div className={styles.projectInformation_services}>
+              {data.services?.map((service, i) => (
+                <span key={service}>{service}</span>
+              ))}
+            </div>
+          </div>
+          <div className={styles.projectInformation_description}>
+            <p>{data.description}</p>
+            {data.demo && data.repository ? (
+              <div className={styles.projectInformation_links}>
+                <Link href={data.demo} target="_blank">
+                  Live Demo
+                </Link>
+                <Link href={data.repository} target="_blank">
+                  Repository
+                </Link>
+              </div>
+            ) : null}
+          </div>
         </div>
       </section>
 
