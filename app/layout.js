@@ -22,9 +22,9 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang="en" className={inter.className}>
       <Analytics />
-      <body className={`container ${inter.className}`}>
+      <body className={`container`}>
         <Navigation />
         {children}
       </body>

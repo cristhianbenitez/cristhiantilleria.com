@@ -1,27 +1,56 @@
 .carousel {
   position: relative;
-  margin-bottom: 30px;
+  margin-bottom: 2.5rem;
   width: 100%;
 }
 
 .projectInformation {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 1fr;
-  gap: 15px;
-  /* margin-bottom: 5rem; */
-  margin-bottom: 2rem;
+  margin-bottom: 3rem;
   font-size: 1.2rem;
+}
+
+.projectInformation_row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+}
+
+.projectInformation_leftSection {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
 }
 
 .projectInformation_services {
   display: flex;
   flex-direction: column;
-  margin-bottom: 30px;
+  justify-content: space-between;
+  /* margin-bottom: 30px; */
 }
 
-.projectInformation_description > h3 {
+.projectInformation_title {
   padding-bottom: 1rem;
+  grid-area: 2/2;
+}
+
+.projectInformation_description p {
+  line-height: 1.5;
+}
+.projectInformation_links {
+  display: flex;
+  gap: 14px;
+  font-weight: 600;
+  margin-top: 1rem;
+}
+
+.projectInformation_links a {
+  text-decoration: none;
+  }
+
+  .projectInformation_links a,
+.projectInformation_links a:visited {
+  color: rgb(80, 80, 172);
 }
 
 .bottomNavigation {
