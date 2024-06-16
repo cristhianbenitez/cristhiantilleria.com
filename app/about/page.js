@@ -13,7 +13,7 @@ export default function About() {
           <Image src="/assets/cristhiantilleria.jpg" height={320} width={320} />
         </div>
         <div className={styles.about__socials}>
-          <Link target="blank" href="mailto:cristhiantilleria@gmail.com">
+          <Link target="blank" href="mailto:hello@cristhiantilleria.com">
             <BsArrowRight />
             &nbsp; Email
           </Link>
