@@ -40,9 +40,8 @@ export default function About() {
       <section className={styles.about__column} grid-col="2">
         <h2 className={styles.about__headline}>
           Hey! I'm Cristhian, a New York based Freelance Front End Developer who
-          likes to Design. My interests lays in the intersection of design and
-          the web,. I love to think about brands and the value of design. With a
-          strong commitment to producing effective and useful work <br />
+          loves Design. My interests lays in the intersection of design and
+          the web. I love to think about brands and the value of design in the work I do. <br />
         </h2>
         <h2 className={styles.about__headline}>
           On my time off you can find me immersed in type books, coding new
