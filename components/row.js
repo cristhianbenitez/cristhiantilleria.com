@@ -77,6 +77,8 @@ const Row = ({ leftImage, rightImage, fullImage, video }) => {
           autoPlay
           loop
           muted
+          playsinline
+          controls
           style={imageStyle}
         >
           <source src={video} type="video/mp4" />
