@@ -8,9 +8,9 @@ import './global.css';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata = {
-  title: 'Cristhian Tilleria - Frontend Developer & Designer',
+  title: 'Cristhian Tilleria - Freelance Developer & Designer',
   description:
-    'Cristhian Tilleria is a New York based Front End Develope & Designer working in brand-identity, ui/ux design and web development',
+    'Cristhian Tilleria is a New York based Freelance Developer & Designer',
   keywords: [
     'design',
     'web developer',
@@ -24,14 +24,20 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }) {
-  const lenisOptions = { autoResize: true };
+  const lenisOptions = {
+    autoResize: true,
+    lerp: 0.1,
+    duration: 1.5,
+    smoothTouch: true
+  };
   return (
     <html lang="en" className={inter.className}>
       <Analytics />
       <body className={`container`}>
-        <Lenis root options={lenisOptions} />
-        <Navigation />
-        {children}
+        <Lenis root options={lenisOptions}>
+          <Navigation />
+          {children}
+        </Lenis>
       </body>
     </html>
   );

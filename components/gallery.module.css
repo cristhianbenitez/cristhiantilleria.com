@@ -11,19 +11,18 @@
 }
 
 .row_image {
-  object-fit: cover;
   height: 100%;
   width: 100%;
 }
 
 .row_image_container {
-  aspect-ratio: auto 3000 / 2200;
-  overflow: hidden;
+  height: 50vw;
+  object-fit: cover;
+  cursor: pointer;
 }
 
 @media (min-width: 764px) {
   .row_image_container {
-    aspect-ratio: auto 3000 / 1876;
   }
   .row {
     grid-template-columns: 1fr 1fr;
@@ -31,9 +30,6 @@
     width: 100%;
     margin-bottom: 20px;
   }
-  /* .row img {
-    max-height: 600px;
-  } */
 
   .fullRow {
     margin-bottom: 20px;

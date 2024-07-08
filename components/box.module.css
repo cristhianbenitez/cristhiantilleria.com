@@ -2,7 +2,13 @@
   object-fit: cover;
   height: 100%;
   width: 100%;
+  filter: grayscale(100%); /* 0-100% */
 }
+
+.box:hover .box__thumbnail {
+  filter: grayscale(0%);
+}
+
 .box__thumbnail_container {
   position: relative;
   overflow: hidden;
@@ -39,9 +45,32 @@
 }
 
 .box:hover .box__bottomText {
-  background: rgba(0, 0, 0, 0.8);
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.4), transparent);
+  /* background: rgba(0, 0, 0, 0.2); */
 }
-
+.box__bottomText__smallScreens {
+  display: none;
+}
+@media (max-width: 768px) {
+  .box__bottomText {
+    display: none;
+  }
+  .box__bottomText__smallScreens {
+    display: block;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+  }
+  .box__bottomText__smallScreens span {
+    display: flex;
+    font-weight: 500;
+    line-height: 120%;
+    font-size: 1rem;
+  }
+  .box__bottomText__smallScreens span:last-child {
+    font-size: 0.8rem;
+    font-weight: 300;
+  }
+}
 @media (min-width: 768px) {
   .box__thumbnail {
     min-height: 300px;

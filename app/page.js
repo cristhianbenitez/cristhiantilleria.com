@@ -32,7 +32,7 @@ export default function Home() {
   return (
     <PageWrapper>
       <main className={styles.work}>
-        <h2 className={styles.headline}>Freelance Graphic Designer</h2>
+        <h2 className={styles.headline}>Freelance Developer & Designer</h2>
         {sortedProjects.map((project, i) => (
           <Box key={project.slug} project={project} />
         ))}

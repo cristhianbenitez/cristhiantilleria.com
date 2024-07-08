@@ -1,9 +1,3 @@
-.carousel {
-  position: relative;
-  margin-bottom: 2.5rem;
-  width: 100%;
-}
-
 .projectInformation {
   margin-bottom: 3rem;
   font-size: 1.2rem;
@@ -12,7 +6,7 @@
 .projectInformation_row {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 15px;
+  column-gap: 20px;
 }
 
 .projectInformation_leftSection {
@@ -26,7 +20,6 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  /* margin-bottom: 30px; */
 }
 
 .projectInformation_title {
@@ -55,18 +48,32 @@
 .bottomNavigation {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 30px;
+  gap: 20px;
+}
+
+/* Gallery */
+.gallery {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  width: 100%;
 }
 
 .content {
   margin-bottom: 5rem;
 }
 
+.bottomNavigation {
+  /* border: 1px solid black; */
+  margin-block: 1.25rem;
+}
+
 .bottomNavigationBtn {
   font-size: 2.15rem;
   font-weight: 400;
   letter-spacing: -0.25px;
-  margin-bottom: 2.5rem;
+  padding: 0;
 }
 
 .bottomNavigationBtn > a {
@@ -74,6 +81,7 @@
   align-items: center;
   text-decoration: none;
   color: black;
+  margin: 0;
 }
 
 .bottomNavigationBtn :hover {
@@ -101,6 +109,6 @@
     height: 850px;
   }
   .bottomNavigationBtn > a {
-    margin-bottom: 1rem;
+    /* margin-bottom: 1rem; */
   }
 }

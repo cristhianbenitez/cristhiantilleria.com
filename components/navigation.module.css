@@ -63,8 +63,8 @@
   .nav__item {
     align-self: center;
     font-size: 2.75rem;
-    padding-top: 1.5rem;
-    padding-bottom: 1.5rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
   }
   .nav__item_socials {
     gap: 15px;
