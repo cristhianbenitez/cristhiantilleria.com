@@ -30,15 +30,16 @@ const toBase64 = (str) =>
     ? Buffer.from(str).toString('base64')
     : window.btoa(str);
 
-export default function Box({ project }) {
+export default React.memo(function Box({ project }) {
   return (
     <div className={styles.box}>
       <Link href={`/projects/${project.slug}`} className={styles.box__link}>
         <div className={styles.box__thumbnail_container}>
           <Image
             src={project.meta.thumbnail}
-            alt={project.meta?.thumbnailAlt && project.meta.thumbnailAlt}
+            alt={project.meta?.thumbnailAlt || ''}
             fill
+            sizes="(max-width: 768px) 100vw, (max-width: 1460px) 50vw, 33vw"
             className={styles.box__thumbnail}
             placeholder="blur"
             blurDataURL={`data:image/svg+xml;base64,${toBase64(
@@ -71,4 +72,4 @@ export default function Box({ project }) {
       </Link>
     </div>
   );
-}
+});

@@ -11,7 +11,9 @@ import styles from './work.module.css';
 
 export async function generateStaticParams() {
   const projectDir = 'projects';
-  const files = fs.readdirSync(path.join(projectDir));
+  const files = fs
+    .readdirSync(path.join(projectDir))
+    .filter((file) => file !== '.DS_Store');
 
   const paths = files.map((filename) => ({
     slug: filename.replace('.mdx', '')
@@ -37,7 +39,7 @@ function getProject({ slug }) {
 
 export default function Work({ params }) {
   const { data, content } = getProject(params);
-
+  console.log(data);
   return (
     <PageWrapper>
       <section className={styles.projectInformation}>

@@ -9,7 +9,9 @@ import PageWrapper from '@/components/pagewrapper';
 
 export default function Home() {
   const projectDir = 'projects';
-  const files = fs.readdirSync(path.join(projectDir));
+  const files = fs
+    .readdirSync(path.join(projectDir))
+    .filter((file) => file !== '.DS_Store');
 
   const projects = files.map((filename) => {
     const fileContent = fs.readFileSync(

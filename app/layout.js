@@ -1,6 +1,7 @@
 import { Analytics } from '@vercel/analytics/react';
 import Navigation from '@/components/navigation';
 import { Inter } from 'next/font/google';
+import { Lenis } from '@/components/lenis';
 
 import './global.css';
 
@@ -11,20 +12,23 @@ export const metadata = {
     'Cristhian Tilleria is a New York based Front End Develope & Designer working in brand-identity, ui/ux design and web development',
   keywords: [
     'design',
-    'web development',
-    ' graphic designer',
+    'web developer',
+    'graphic-design',
     'brand-identity',
     'digital-design',
     'front-end-development',
-    'nyc-designer'
+    'nyc-designer',
+    'nyc-web-designer'
   ]
 };
 
 export default function RootLayout({ children }) {
+  const lenisOptions = { autoResize: true };
   return (
     <html lang="en" className={inter.className}>
       <Analytics />
       <body className={`container`}>
+        <Lenis root options={lenisOptions} />
         <Navigation />
         {children}
       </body>
