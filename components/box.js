@@ -39,7 +39,7 @@ export default React.memo(function Box({ project }) {
             src={project.meta.thumbnail}
             alt={project.meta?.thumbnailAlt || ''}
             fill
-            sizes="(max-width: 768px) 100vw, (max-width: 1460px) 50vw, 33vw"
+            sizes="(max-width: 768px) 100vw, (max-width: 2560px) 50vw"
             className={styles.box__thumbnail}
             placeholder="blur"
             blurDataURL={`data:image/svg+xml;base64,${toBase64(

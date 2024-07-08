@@ -6,6 +6,7 @@ import { Lenis } from '@/components/lenis';
 import './global.css';
 
 const inter = Inter({ subsets: ['latin'] });
+
 export const metadata = {
   title: 'Cristhian Tilleria - Frontend Developer & Designer',
   description:

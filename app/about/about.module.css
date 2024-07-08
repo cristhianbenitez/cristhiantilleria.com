@@ -40,19 +40,24 @@
 .about__headline {
   font-weight: 500;
   line-height: 1.25;
-  margin-bottom: 2rem;
+  margin-bottom: 1.25rem;
   font-size: 1.3rem;
   letter-spacing: 0.25px;
+  max-width: 600px;
 }
 
 .about__services {
   font-size: 1.5rem;
+  margin-top: 3rem;
 }
 
 .about__services > ul {
   list-style: none;
   margin: 0;
   padding: 0;
+  list-style: none;
+  font-weight: 300;
+  line-height: 130%;
 }
 
 .about__services__title {
@@ -76,10 +81,9 @@
   }
 
   .about__headline {
-    /* font-size: 1.5rem; */
-    font-size: 2rem;
+    font-size: 1.75rem;
     font-weight: 400;
-    line-height: 2.7rem;
+    line-height: 125%;
     letter-spacing: 0.5px;
   }
 }

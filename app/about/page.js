@@ -42,22 +42,26 @@ export default function About() {
         </div>
       </section>
       <section className={styles.about__column} grid-col="2">
-        <h2 className={styles.about__headline}>
+        <p className={styles.about__headline}>
           Hey! I'm Cristhian, a New York based Freelance Developer & Designer.
           My interests lays in the intersection of design and the web. I love to
           think about the value of design in the work I do.
           <br />
-        </h2>
-        <h2 className={styles.about__headline}>
+        </p>
+        <p className={styles.about__headline}>
           {/* ADD LINKS TO PLAYLISTS,BOOKS AND PHOTOS INSIDE WORDS */}
           On my time off you can find me reading books, thinking about a new
           personal project, enjoying music, learning some new language on
           duolingo or capturing moments through photography.
-        </h2>
+        </p>
         <div className={styles.about__services}>
           <ul>
-            <li>Full-Stack Web Development</li>
-            <li>UI/UX </li>
+            <li style={{ fontWeight: '500', marginBottom: '.5rem' }}>
+              Services
+            </li>
+            <li>Web Development</li>
+            <li>Web Design </li>
+            <li>Full-Stack Development</li>
             <li>Brand Identity</li>
             <li>Logo Design</li>
           </ul>
