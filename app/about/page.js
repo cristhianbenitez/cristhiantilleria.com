@@ -35,18 +35,24 @@ export default function About() {
             <BsArrowRight />
             &nbsp; LinkedIn
           </Link>
+          <Link target="blank" href="https://cristhiantilleria.tumblr.com/">
+            <BsArrowRight />
+            &nbsp; Tumblr
+          </Link>
         </div>
       </section>
       <section className={styles.about__column} grid-col="2">
         <h2 className={styles.about__headline}>
-          Hey! I'm Cristhian, a New York based Freelance Front End Developer who
-          loves Design. My interests lays in the intersection of design and
-          the web. I love to think about brands and the value of design in the work I do. <br />
+          Hey! I'm Cristhian, a New York based Freelance Developer & Designer.
+          My interests lays in the intersection of design and the web. I love to
+          think about the value of design in the work I do.
+          <br />
         </h2>
         <h2 className={styles.about__headline}>
-          On my time off you can find me immersed in type books, coding new
-          projects, enjoying music, learning some new language on duolingo or
-          capturing moments through photography.
+          {/* ADD LINKS TO PLAYLISTS,BOOKS AND PHOTOS INSIDE WORDS */}
+          On my time off you can find me reading books, thinking about a new
+          personal project, enjoying music, learning some new language on
+          duolingo or capturing moments through photography.
         </h2>
         <div className={styles.about__services}>
           <ul>
