@@ -47,7 +47,7 @@
 }
 
 .about__services {
-  font-size: 1.5rem;
+  font-size: 1rem;
   margin-top: 3rem;
 }
 
@@ -78,6 +78,11 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 20px;
+  }
+
+  .about__services {
+    font-size: 1.5rem;
+    margin-top: 3rem;
   }
 
   .about__headline {
