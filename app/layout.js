@@ -1,7 +1,6 @@
 import { Analytics } from '@vercel/analytics/react';
 import Navigation from '@/components/navigation';
 import { Inter } from 'next/font/google';
-import { Lenis } from '@/components/lenis';
 
 import './global.css';
 
@@ -24,12 +23,10 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }) {
-  const lenisOptions = { autoResize: true };
   return (
     <html lang="en" className={inter.className}>
       <Analytics />
       <body className={`container`}>
-        <Lenis root options={lenisOptions} />
         <Navigation />
         {children}
       </body>
