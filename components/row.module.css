@@ -10,6 +10,10 @@
   margin-bottom: 15px;
 }
 
+.fullRow:hover {
+  cursor: pointer;
+}
+
 .row_image {
   object-fit: cover;
   height: 100%;
@@ -38,12 +42,23 @@
   .fullRow {
     margin-bottom: 20px;
   }
+}
 
-  .row [grid-col='1'] {
-    grid-area: 'a';
-  }
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
 
-  .row [grid-col='1'] {
-    grid-area: 'b';
-  }
+.overlayImage {
+  max-width: 90vw;
+  max-height: 90vh;
+  object-fit: contain;
 }

@@ -1,40 +1,58 @@
+.pageWrapper {
+  min-height: 100vh;
+}
+
+.content {
+  height: auto;
+}
+
 .carousel {
   position: relative;
   margin-bottom: 2.5rem;
   width: 100%;
 }
 
-.projectInformation {
-  margin-bottom: 3rem;
-  font-size: 1.2rem;
-}
-
-.projectInformation_row {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 15px;
-}
-
-.projectInformation_leftSection {
+.contentWrapper {
+  height: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  height: 100%;
+}
+
+.projectContainer {
+  flex: 1;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  overflow: hidden;
+}
+
+.projectInformation {
+  margin-bottom: 3rem;
 }
 
 .projectInformation_services {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  /* margin-bottom: 30px; */
+  margin-bottom: 30px;
+  font-size: 1rem;
+}
+
+.projectInformation_services_item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
 .projectInformation_title {
+  font-size: 1.5rem;
   padding-bottom: 1rem;
 }
 
 .projectInformation_description p {
   line-height: 1.5;
+  max-width: 520px;
+  font-size: 1.2rem;
 }
 .projectInformation_links {
   display: flex;
@@ -53,20 +71,18 @@
 }
 
 .bottomNavigation {
+  margin-top: auto;
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 30px;
-}
-
-.content {
-  margin-bottom: 5rem;
+  padding-block: 2rem;
 }
 
 .bottomNavigationBtn {
   font-size: 2.15rem;
   font-weight: 400;
   letter-spacing: -0.25px;
-  margin-bottom: 2.5rem;
+  /* margin-bottom: 2.5rem; */
 }
 
 .bottomNavigationBtn > a {
@@ -94,6 +110,29 @@
   .projectInformation_title {
     grid-area: 2/2;
   }
+  .pageWrapper {
+    height: calc(100vh - var(--nav-height));
+    overflow: hidden;
+    margin-top: var(--nav-height);
+  }
+
+  .projectContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .content {
+    height: 100%;
+    max-height: 75vh;
+    overflow-y: scroll;
+  }
+
+  .bottomNavigation {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+  }
 }
 
 @media (min-width: 1460px) {
@@ -101,6 +140,5 @@
     height: 850px;
   }
   .bottomNavigationBtn > a {
-    margin-bottom: 1rem;
   }
 }

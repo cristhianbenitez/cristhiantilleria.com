@@ -1,91 +1,110 @@
 'use client';
 
 import Image from 'next/image';
-import React from 'react';
+import React, { useState } from 'react';
 import styles from './row.module.css';
-import { motion, useInView } from 'framer-motion';
+import { useInView, motion, AnimatePresence, easeIn } from 'framer-motion';
 
-const Row = ({ leftImage, rightImage, fullImage, video }) => {
+const Row = ({ fullImage, video, style }) => {
   const ref = React.useRef(null);
+  const [selectedImage, setSelectedImage] = useState(null);
   const isInView = useInView(ref, {
     once: true,
     amount: 0.25
   });
 
-  const imageStyle = {
-    transform: isInView ? 'none' : 'translateY(20px)',
-    opacity: isInView ? 1 : 0,
-    transition: 'all 0.9s ease-in'
+  // Overlay animation variants
+  const overlayVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        duration: 0.3,
+        ease: [0.22, 1, 0.36, 1] // Custom cubic-bezier for smooth fade
+      }
+    },
+    exit: {
+      opacity: 0,
+      transition: {
+        duration: 0.2,
+        ease: [0.22, 1, 0.36, 1]
+      }
+    }
   };
 
-  if (fullImage) {
-    return (
+  // Image animation variants
+  const imageVariants = {
+    hidden: {
+      scale: 0.8,
+      opacity: 0,
+      y: 20
+    },
+    visible: {
+      scale: 1,
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.4,
+        easeIn: [0.12, 0, 0.39, 0], // Custom easing for natural motion
+        delay: 0.1 // Slight delay for the image to appear after overlay
+      }
+    },
+    exit: {
+      scale: 0.8,
+      opacity: 0,
+      y: 10,
+      transition: {
+        duration: 0.3,
+        ease: [0.22, 1, 0.36, 1]
+      }
+    }
+  };
+
+  return (
+    <>
       <div className={styles.fullRow}>
         <Image
           ref={ref}
           src={fullImage}
           width={9999}
           height={9999}
-          style={imageStyle}
+          style={style}
           className={styles.row_image}
+          onClick={() => setSelectedImage(fullImage)}
         />
       </div>
-    );
-  }
-  if (leftImage || rightImage) {
-    return (
-      <div className={styles.row}>
-        <div>
-          {leftImage && (
-            <div className={styles.row_image_container} grid-col="1">
+      <AnimatePresence>
+        {selectedImage && (
+          <motion.div
+            className={styles.overlay}
+            variants={overlayVariants}
+            initial="hidden"
+            animate="visible"
+            exit="exit"
+            onClick={() => setSelectedImage(null)}
+          >
+            <motion.div
+              variants={imageVariants}
+              initial="hidden"
+              animate="visible"
+              exit="exit"
+              className={styles.imageWrapper}
+              layoutId={`image-${selectedImage}`} // Enables smooth layout transitions
+            >
               <Image
-                src={leftImage}
+                src={selectedImage}
                 width={9999}
                 height={9999}
-                ref={ref}
-                style={imageStyle}
-                className={styles.row_image}
+                className={styles.overlayImage}
+                alt="Enlarged view"
+                priority // Ensures faster loading
               />
-            </div>
-          )}
-        </div>
-        <div>
-          {rightImage && (
-            <div className={styles.row_image_container} grid-col="2">
-              <Image
-                src={rightImage}
-                width={9999}
-                height={9999}
-                ref={ref}
-                style={imageStyle}
-                grid-col="2"
-                className={styles.row_image}
-              />
-            </div>
-          )}
-        </div>
-      </div>
-    );
-  }
-
-  if (video) {
-    return (
-      <div className={styles.fullRow}>
-        <video
-          ref={ref}
-          className={styles.row_image}
-          autoPlay
-          loop
-          muted
-          playsinline
-          controls
-          style={imageStyle}
-        >
-          <source src={video} type="video/mp4" />
-        </video>
-      </div>
-    );
-  }
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </>
+  );
 };
 
 export default Row;

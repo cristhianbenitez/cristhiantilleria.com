@@ -7,13 +7,14 @@ import { MDXRemote } from 'next-mdx-remote/rsc';
 
 import PageWrapper from '@/components/pagewrapper';
 import Row from '@/components/row';
-import styles from './work.module.css';
+import styles from './projects.module.css';
+import ScrollableContent from './components/ScrollableContent';
+
+import { BsArrowRight } from 'react-icons/bs';
 
 export async function generateStaticParams() {
   const projectDir = 'projects';
-  const files = fs
-    .readdirSync(path.join(projectDir))
-    .filter((file) => file !== '.DS_Store');
+  const files = fs.readdirSync(path.join(projectDir)).filter((file) => file !== '.DS_Store');
 
   const paths = files.map((filename) => ({
     slug: filename.replace('.mdx', '')
@@ -23,10 +24,7 @@ export async function generateStaticParams() {
 }
 
 function getProject({ slug }) {
-  const markdownFile = fs.readFileSync(
-    path.join('projects', slug + '.mdx'),
-    'utf-8'
-  );
+  const markdownFile = fs.readFileSync(path.join('projects', slug + '.mdx'), 'utf-8');
 
   const { data, content } = matter(markdownFile);
 
@@ -39,21 +37,20 @@ function getProject({ slug }) {
 
 export default function Work({ params }) {
   const { data, content } = getProject(params);
-  console.log(data);
   return (
-    <PageWrapper>
-      <section className={styles.projectInformation}>
-        <div className={styles.projectInformation_row}>
-          <h3 className={styles.projectInformation_title}>{data.title}</h3>
-        </div>
-        <div className={styles.projectInformation_row}>
-          <div className={styles.projectInformation_leftSection}>
-            <div className={styles.projectInformation_services}>
-              {data.services?.map((service, i) => (
-                <span key={service}>{service}</span>
-              ))}
-            </div>
+    <PageWrapper className={styles.pageWrapper}>
+      <main className={styles.projectContainer}>
+        <section className={styles.projectInformation}>
+          <div className={styles.projectInformation_services}>
+            {data.services?.map((service, i) => (
+              <span key={service} className={styles.projectInformation_services_item}>
+                <BsArrowRight />
+                {service}
+              </span>
+            ))}
           </div>
+
+          <h3 className={styles.projectInformation_title}>{data.title}</h3>
           <div className={styles.projectInformation_description}>
             <p>{data.description}</p>
             {data.demo && data.repository ? (
@@ -67,12 +64,12 @@ export default function Work({ params }) {
               </div>
             ) : null}
           </div>
-        </div>
-      </section>
+        </section>
 
-      <section className={styles.content}>
-        <MDXRemote source={content} components={{ Row }} />
-      </section>
+        <ScrollableContent>
+          <MDXRemote source={content} components={{ Row }} />
+        </ScrollableContent>
+      </main>
 
       <section className={styles.bottomNavigation}>
         <span className={styles.bottomNavigationBtn}>

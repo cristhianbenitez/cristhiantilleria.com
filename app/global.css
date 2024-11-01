@@ -111,6 +111,8 @@ h1 {
   margin-inline: auto;
   padding-inline: 1rem;
   margin-bottom: 15px;
+  height: 100%;
+  position: relative;
 }
 
 @media (min-width: 764px) {
