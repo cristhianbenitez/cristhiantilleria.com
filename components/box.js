@@ -6,8 +6,9 @@ import Image from 'next/image';
 import styles from './box.module.css';
 import { motion } from 'framer-motion';
 
+const isDesktop = typeof window !== 'undefined' ? window.innerWidth > 768 : false;
 const spanVariant = {
-  hidden: { opacity: 0, y: 10 },
+  hidden: { opacity: isDesktop ? 0 : 1, y: isDesktop ? 10 : 0 },
   hover: { opacity: 1, y: 0, transition: { duration: 0.5 } }
 };
 
@@ -25,10 +26,7 @@ const shimmer = (w, h) => `
   <animate xlink:href="#r" attributeName="x" from="-${w}" to="${w}" dur="1s" repeatCount="indefinite"  />
 </svg>`;
 
-const toBase64 = (str) =>
-  typeof window === 'undefined'
-    ? Buffer.from(str).toString('base64')
-    : window.btoa(str);
+const toBase64 = (str) => (typeof window === 'undefined' ? Buffer.from(str).toString('base64') : window.btoa(str));
 
 export default React.memo(function Box({ project }) {
   return (
@@ -42,31 +40,16 @@ export default React.memo(function Box({ project }) {
             sizes="(max-width: 768px) 100vw, (max-width: 2560px) 50vw"
             className={styles.box__thumbnail}
             placeholder="blur"
-            blurDataURL={`data:image/svg+xml;base64,${toBase64(
-              shimmer(700, 475)
-            )}`}
+            blurDataURL={`data:image/svg+xml;base64,${toBase64(shimmer(700, 475))}`}
             priority
           />
         </div>
-        <motion.div
-          initial="hidden"
-          animate="initial"
-          whileHover="hover"
-          className={styles.box__bottomText}
-        >
-          <motion.span
-            variants={spanVariant}
-            layoutId="underline"
-            className={styles.box__title}
-          >
-            {project.meta.title}
-          </motion.span>
-          <motion.span
-            variants={spanVariant}
-            layoutId="underline"
-            className={styles.box__title}
-          >
+        <motion.div initial="hidden" animate="initial" whileHover="hover" className={styles.box__bottomText}>
+          <motion.span variants={spanVariant} layoutId="underline" className={styles.box__title}>
             {project.meta.type}
+          </motion.span>
+          <motion.span variants={spanVariant} layoutId="underline" className={styles.box__title}>
+            {project.meta.title}
           </motion.span>
         </motion.div>
       </Link>

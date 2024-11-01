@@ -5,8 +5,9 @@
   grid-template-rows: 1fr;
   grid-template-columns: 1fr;
   position: relative;
-  padding-block: 0.5rem;
+  padding-block: 2rem;
   margin-bottom: 15px;
+  line-height: 1.2;
 }
 
 .nav__item {
@@ -58,6 +59,8 @@
     grid-template-rows: none;
     gap: 20px;
     grid-template-columns: 1fr 1fr;
+    padding-block: 0.5rem;
+    margin-bottom: 15px;
   }
 
   .nav__item {
