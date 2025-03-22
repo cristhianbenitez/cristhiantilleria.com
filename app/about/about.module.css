@@ -1,7 +1,7 @@
 .about {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 1fr, 1fr;
+  grid-template-rows: 1fr 1fr;
   gap: 15px;
   margin-bottom: 2rem;
 }
@@ -38,16 +38,15 @@
 }
 
 .about__headline {
-  font-weight: 500;
-  line-height: 1.25;
   margin-bottom: 1.25rem;
-  font-size: 1.3rem;
-  letter-spacing: 0.25px;
-  max-width: 600px;
+  font-size: clamp(1.3rem, 3vw, 1.75rem);
+  letter-spacing: 0.015em;
+  line-height: 1.4;
+  max-width: 60ch;
 }
 
 .about__services {
-  font-size: 1rem;
+  font-size: 1.1rem;
   margin-top: 3rem;
 }
 
@@ -55,19 +54,18 @@
   list-style: none;
   margin: 0;
   padding: 0;
-  list-style: none;
-  font-weight: 300;
-  line-height: 130%;
+  font-weight: 350;
+  line-height: 1.6;
 }
 
 .about__services__title {
-  font-weight: 500;
-  margin-bottom: 0.4rem;
+  font-weight: 600;
+  margin-bottom: 0.6rem;
+  letter-spacing: 0.03em;
 }
 
-@media (min-width: 764px) {
+@media (min-width: 768px) {
   .about {
-    display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr;
     gap: 20px;
@@ -81,17 +79,11 @@
   }
 
   .about__services {
-    font-size: 1.5rem;
-    margin-top: 3rem;
+    font-size: 1.25rem;
   }
 
   .about__headline {
-    font-size: 1.75rem;
-    font-weight: 400;
-    line-height: 125%;
-    letter-spacing: 0.5px;
+    line-height: 1.35;
+    letter-spacing: 0.02em;
   }
-}
-
-@media (min-width: 1460px) {
 }

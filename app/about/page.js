@@ -4,8 +4,20 @@ import Image from 'next/image';
 import { BsArrowRight } from 'react-icons/bs';
 import Link from 'next/link';
 import PageWrapper from '@/components/pagewrapper';
+import { getPlaiceholder } from 'plaiceholder';
+import fs from 'fs';
+import path from 'path';
 
-export default function About() {
+async function getBlurData() {
+  const { base64 } = await getPlaiceholder(
+    fs.readFileSync(path.join(process.cwd(), 'public/assets/cristhiantilleria.jpg'))
+  );
+  return base64;
+}
+
+export default async function About() {
+  const blurData = await getBlurData();
+
   return (
     <PageWrapper className={styles.about}>
       <section className={styles.about__column} grid-col="1">
@@ -16,6 +28,8 @@ export default function About() {
             height={320}
             width={320}
             priority
+            placeholder="blur"
+            blurDataURL={blurData}
           />
         </div>
         <div className={styles.about__socials}>
@@ -31,7 +45,7 @@ export default function About() {
             <BsArrowRight />
             &nbsp; Instagram
           </Link>
-          <Link target="blank" href="https://www.linkedin.com/in/cristhianbenitez/">
+          <Link target="blank" href="https://www.linkedin.com/in/cristhiantilleria/">
             <BsArrowRight />
             &nbsp; LinkedIn
           </Link>
