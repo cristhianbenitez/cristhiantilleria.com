@@ -5,12 +5,12 @@ import React, { useState } from 'react';
 import styles from './row.module.css';
 import { useInView, motion, AnimatePresence, easeIn } from 'framer-motion';
 
-const Row = ({ fullImage, video, style }) => {
+const Row = ({ fullImage, video, style, blurDataURL }) => {
   const ref = React.useRef(null);
   const [selectedImage, setSelectedImage] = useState(null);
   const isInView = useInView(ref, {
     once: true,
-    amount: 0.25
+    amount: 0.25,
   });
 
   // Overlay animation variants
@@ -20,16 +20,16 @@ const Row = ({ fullImage, video, style }) => {
       opacity: 1,
       transition: {
         duration: 0.3,
-        ease: [0.22, 1, 0.36, 1] // Custom cubic-bezier for smooth fade
-      }
+        ease: [0.22, 1, 0.36, 1], // Custom cubic-bezier for smooth fade
+      },
     },
     exit: {
       opacity: 0,
       transition: {
         duration: 0.2,
-        ease: [0.22, 1, 0.36, 1]
-      }
-    }
+        ease: [0.22, 1, 0.36, 1],
+      },
+    },
   };
 
   // Image animation variants
@@ -37,7 +37,7 @@ const Row = ({ fullImage, video, style }) => {
     hidden: {
       scale: 0.8,
       opacity: 0,
-      y: 20
+      y: 20,
     },
     visible: {
       scale: 1,
@@ -46,8 +46,8 @@ const Row = ({ fullImage, video, style }) => {
       transition: {
         duration: 0.4,
         easeIn: [0.12, 0, 0.39, 0], // Custom easing for natural motion
-        delay: 0.1 // Slight delay for the image to appear after overlay
-      }
+        delay: 0.1, // Slight delay for the image to appear after overlay
+      },
     },
     exit: {
       scale: 0.8,
@@ -55,22 +55,28 @@ const Row = ({ fullImage, video, style }) => {
       y: 10,
       transition: {
         duration: 0.3,
-        ease: [0.22, 1, 0.36, 1]
-      }
-    }
+        ease: [0.22, 1, 0.36, 1],
+      },
+    },
   };
 
   return (
     <>
       <div className={styles.fullRow}>
         <Image
+          alt=""
           ref={ref}
           src={fullImage}
-          width={9999}
-          height={9999}
+          width={1920}
+          height={1080}
           style={style}
           className={styles.row_image}
           onClick={() => setSelectedImage(fullImage)}
+          placeholder="blur"
+          blurDataURL={blurDataURL}
+          quality={50}
+          priority={true}
+          sizes="(max-width: 768px) 100vw, 80vw"
         />
       </div>
       <AnimatePresence>
@@ -89,15 +95,17 @@ const Row = ({ fullImage, video, style }) => {
               animate="visible"
               exit="exit"
               className={styles.imageWrapper}
-              layoutId={`image-${selectedImage}`} // Enables smooth layout transitions
+              layoutId={`image-${selectedImage}`}
             >
               <Image
                 src={selectedImage}
-                width={9999}
-                height={9999}
+                width={1920}
+                height={1080}
                 className={styles.overlayImage}
                 alt="Enlarged view"
-                priority // Ensures faster loading
+                quality={70}
+                priority
+                sizes="90vw"
               />
             </motion.div>
           </motion.div>

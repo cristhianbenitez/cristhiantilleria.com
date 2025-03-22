@@ -2,11 +2,13 @@
   object-fit: cover;
   height: 100%;
   width: 100%;
+  max-height: 60vh;
+  will-change: transform;
 }
 .box__thumbnail_container {
   position: relative;
   overflow: hidden;
-  aspect-ratio: auto 3001 / 1876;
+  aspect-ratio: 16/9;
 }
 
 .box {

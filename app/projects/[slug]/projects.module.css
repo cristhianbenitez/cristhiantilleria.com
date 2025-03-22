@@ -16,6 +16,7 @@
   height: 100%;
   display: flex;
   flex-direction: column;
+  position: relative;
 }
 
 .projectContainer {
@@ -75,14 +76,13 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 30px;
-  padding-block: 2rem;
+  padding-block: 1.5rem;
 }
 
 .bottomNavigationBtn {
   font-size: 2.15rem;
   font-weight: 400;
   letter-spacing: -0.25px;
-  /* margin-bottom: 2.5rem; */
 }
 
 .bottomNavigationBtn > a {
@@ -90,6 +90,10 @@
   align-items: center;
   text-decoration: none;
   color: black;
+}
+
+.bottomNavigationBtn:last-child {
+  justify-self: flex-end;
 }
 
 .bottomNavigationBtn :hover {
@@ -128,10 +132,14 @@
   }
 
   .bottomNavigation {
-    position: absolute;
+    position: sticky;
     bottom: 0;
-    right: 0;
-    left: 0;
+    background: white;
+    z-index: 10;
+    margin-top: auto;
+  }
+  .bottomNavigationBtn:last-child {
+    justify-self: flex-start;
   }
 }
 

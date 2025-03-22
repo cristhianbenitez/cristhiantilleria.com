@@ -18,13 +18,13 @@ export const metadata = {
     'digital-design',
     'front-end-development',
     'nyc-designer',
-    'nyc-web-designer'
-  ]
+    'nyc-web-designer',
+  ],
 };
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className={inter.className}>
+    <html lang="en" className={inter.className} suppressHydrationWarning>
       <Analytics />
       <body className="container">
         <Navigation />
